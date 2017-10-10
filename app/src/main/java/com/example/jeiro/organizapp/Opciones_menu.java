@@ -1,5 +1,6 @@
 package com.example.jeiro.organizapp;
 
+import android.content.Context;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -40,7 +41,6 @@ public class Opciones_menu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_opciones_menu);
-
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         // Create the adapter that will return a fragment for each of the three
@@ -62,7 +62,6 @@ public class Opciones_menu extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-
     }
 
 

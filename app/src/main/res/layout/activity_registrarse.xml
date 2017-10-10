@@ -129,7 +129,9 @@
                 android:background="@drawable/boton_redondeado"
                 android:textSize="15dp"
                 android:textColor="@color/colorBlanco"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:onClick="registrar_usuario"
+                />
 
         </RelativeLayout>
     </LinearLayout>
