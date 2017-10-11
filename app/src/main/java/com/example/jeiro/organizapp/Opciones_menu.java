@@ -1,13 +1,6 @@
 package com.example.jeiro.organizapp;
 
-import android.content.Context;
-import android.content.ContextWrapper;
-import android.content.res.Resources;
-import android.os.Environment;
 import android.support.design.widget.TabLayout;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
@@ -17,11 +10,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 import android.view.Menu;
-import android.view.View;
 import android.widget.Toast;
-
-import com.example.jeiro.organizapp.Datos.*;
-import com.example.jeiro.organizapp.Modelo.*;
 
 import java.io.File;
 
@@ -30,8 +19,6 @@ public class Opciones_menu extends AppCompatActivity {
     private SectionsPagerAdapter mSectionsPagerAdapter;
 
     private ViewPager mViewPager;
-    public static String root_usuario;
-    public static String padre = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +35,7 @@ public class Opciones_menu extends AppCompatActivity {
         {
             Toast.makeText(this,"Carpeta base creada", Toast.LENGTH_SHORT).show();
         }
-        root_usuario = carpetaContenedora.getAbsolutePath().toString();
+        MainActivity.root_usuario = carpetaContenedora.getAbsolutePath().toString();
 
         //Toast.makeText(this,"Ruta " + root_usuario, Toast.LENGTH_SHORT).show();
         //*/

@@ -25,6 +25,9 @@ public class MainActivity extends AppCompatActivity
 {
     public static String  root;
     public static Usuario usuario_activo;
+    public static String root_usuario;
+    public static String padre = "";
+    public static String string_temporal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -1,6 +1,7 @@
 package com.example.jeiro.organizapp;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
@@ -16,8 +17,10 @@ import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -42,52 +45,42 @@ public class Fragment_albumes extends Fragment
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        datos_album datos = new datos_album();
-        ArrayList<Album> lista_datos = datos.obtener_albums_por_album(getActivity(),new Album( Opciones_menu.padre,"",MainActivity.usuario_activo.getUsuario()));
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+    {
+
         View v;
-        if(lista_datos.size() == 0)
+
+        v = inflater.inflate(R.layout.fragment_fragment_albumes, container, false);
+
+        galleryGridView = (GridView) v.findViewById(R.id.galleryGridView);
+        int iDisplayWidth = getResources().getDisplayMetrics().widthPixels ;
+        Resources resources = getActivity().getApplicationContext().getResources();
+        DisplayMetrics metrics = resources.getDisplayMetrics();
+        float dp = iDisplayWidth / (metrics.densityDpi / 160f);
+
+        if(dp < 360)
         {
-            v = inflater.inflate(R.layout.fragment_vacio, container, false);
-
-            TextView textView = (TextView) v.findViewById(R.id.label);
-            textView.setText("No hay álbumes");
-
+            dp = (dp - 17) / 2;
+            float px = Function.convertDpToPixel(dp, getActivity().getApplicationContext());
+            galleryGridView.setColumnWidth(Math.round(px));
         }
-        else
-        {
-            v = inflater.inflate(R.layout.fragment_fragment_albumes, container, false);
 
-            galleryGridView = (GridView) v.findViewById(R.id.galleryGridView);
-            int iDisplayWidth = getResources().getDisplayMetrics().widthPixels ;
-            Resources resources = getActivity().getApplicationContext().getResources();
-            DisplayMetrics metrics = resources.getDisplayMetrics();
-            float dp = iDisplayWidth / (metrics.densityDpi / 160f);
-
-            if(dp < 360)
-            {
-                dp = (dp - 17) / 2;
-                float px = Function.convertDpToPixel(dp, getActivity().getApplicationContext());
-                galleryGridView.setColumnWidth(Math.round(px));
+        FloatingActionButton fab = (FloatingActionButton) v.findViewById(R.id.add_album);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                btnShowDialog(view);
+                Snackbar.make(view, "Éxito, se ha creado un álbum", Snackbar.LENGTH_LONG).setAction("Action", null).show();
+                cargar_grid_view();
+                set_adapter();
             }
+        });
 
-            FloatingActionButton fab = (FloatingActionButton) v.findViewById(R.id.add_album);
-            fab.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    btnShowDialog(view);
-                    Snackbar.make(view, "Éxito, se ha creado un álbum", Snackbar.LENGTH_LONG).setAction("Action", null).show();
-                    cargar_grid_view();
-                    set_adapter();
-                }
-            });
+        MainActivity.padre = "";
 
-            Opciones_menu.padre = "";
-
-            Toast.makeText(getActivity(),"todo parece bien", Toast.LENGTH_SHORT).show();
-            cargar_grid_view();
-            set_adapter();
-        }
+        Toast.makeText(getActivity(),"todo parece bien", Toast.LENGTH_SHORT).show();
+        cargar_grid_view();
+        set_adapter();
         return v;
     }
 
@@ -97,7 +90,7 @@ public class Fragment_albumes extends Fragment
 
     private void showInputNameDialog() {
         FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-        Nuevo_album_alert_dialog inputNameDialog = new Nuevo_album_alert_dialog();
+        Nuevo_album inputNameDialog = new Nuevo_album();
         inputNameDialog.setCancelable(false);
         inputNameDialog.setDialogTitle("Nuevo álbum");
         inputNameDialog.show(fragmentManager, "Input Dialog");
@@ -132,7 +125,7 @@ public class Fragment_albumes extends Fragment
         //sleep();
         datos_album d_album              = new datos_album();
         datos_contenido d_contenido      = new datos_contenido();
-        Album album = new Album(Opciones_menu.padre,"",MainActivity.usuario_activo.getUsuario());
+        Album album = new Album("", MainActivity.padre,MainActivity.usuario_activo.getUsuario());
         ArrayList<Album> l_albums        = d_album.obtener_albums_por_album(getActivity(), album);
         ArrayList<Contenido> l_contenido = d_contenido.obtener_contenido_por_album(getActivity(), album);
 
@@ -149,11 +142,12 @@ public class Fragment_albumes extends Fragment
             Album temp = l_albums.get(i);
             name = temp.getNombre();                         // 1
             if(l_contenido.size() != 0)
-                path = Opciones_menu.root_usuario + File.separator + d_album.obtener_album_path(getActivity(),new Album(l_contenido.get(0).getPadre(),"","")) + l_contenido.get(0).getNombre();
+                path = MainActivity.root_usuario + File.separator + d_album.obtener_album_path(getActivity(),new Album(l_contenido.get(0).getPadre(),"","")) + l_contenido.get(0).getNombre();
             else
                 path = "";                                         // 2
             // File acr = new File(Opciones_menu.root_usuario + path, temp.getNombre());
-            countPhoto = Integer.toString(l_contenido.size());     // 3
+
+            countPhoto = Integer.toString(d_album.obtener_albums_por_album(getActivity(),temp).size());     // 3
             tipo = Function.ALBUM;                                            // 4
             tipo_contenido = "";                                   // 5
 
@@ -165,7 +159,7 @@ public class Fragment_albumes extends Fragment
         {
             Contenido temp = l_contenido.get(i);
             name = temp.getNombre();
-            path = Opciones_menu.root_usuario + File.separator + d_album.obtener_album_path(getActivity(),new Album(temp.getPadre(),"","")) + temp.getNombre();
+            path = MainActivity.root_usuario + File.separator + d_album.obtener_album_path(getActivity(),new Album(temp.getPadre(),"","")) + temp.getNombre();
             tipo = Function.CONTENIDO;
             countPhoto = "";
             tipo_contenido = temp.getTipo();
@@ -184,13 +178,80 @@ public class Fragment_albumes extends Fragment
         galleryGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view,
                                     final int position, long id) {
-                /*
-                Intent intent = new Intent(getActivity(), Fragment_albumes.class);
-                intent.putExtra("name", albumList.get(+position).get(Function.KEY_ALBUM));
-                startActivity(intent);
-                //*/
+
                 int view_id = view.getId();
-                Toast.makeText(getActivity(),"view_id " + view_id + " - " + id , Toast.LENGTH_SHORT).show();
+                if(view_id == 3)
+                {
+                    AlbumViewHolder a = (AlbumViewHolder)view.getTag();
+                    a.gallery_title.getText();
+                    MainActivity.padre = a.gallery_title.getText().toString();
+                    cargar_grid_view();
+                    set_adapter();
+                    getActivity().setTitle(MainActivity.padre);
+                }
+                Toast.makeText(getActivity(),"view_id " + view.getId() + " - " + id , Toast.LENGTH_SHORT).show();
+            }
+        });
+        galleryGridView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            public boolean onItemLongClick(AdapterView<?> parent, View view,
+                                           final int position, long id)
+            {
+                int view_id = view.getId();
+                if(view_id == 3)
+                {
+                    AlbumViewHolder a = (AlbumViewHolder)view.getTag();
+                    MainActivity.string_temporal = a.gallery_title.getText().toString();
+                    final Dialog dialog = new Dialog(getActivity());
+                    dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                    dialog.setContentView(R.layout.dialog_editar_eliminar);
+                    dialog.show();
+
+                    final Button btn_reset = (Button)dialog.findViewById(R.id.btnEditar);
+                    btn_reset.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v)
+                        {
+                            btnShowDialog(v);
+                            cargar_grid_view();
+                            set_adapter();
+                        }
+                    });
+
+                    final Button btn_ingresos = (Button)dialog.findViewById(R.id.btnEliminar);
+                    btn_ingresos.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                        }
+                    });
+                }
+                else
+                    {
+                    final Dialog dialog = new Dialog(getActivity());
+                    dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                    dialog.setContentView(R.layout.dialog_editar_eliminar_mover);
+                    dialog.show();
+
+                    final Button btn_reset = (Button) dialog.findViewById(R.id.button);
+                    btn_reset.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                        }
+                    });
+
+                    final Button btn_ingresos = (Button) dialog.findViewById(R.id.button2);
+                    btn_ingresos.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                        }
+                    });
+                    final Button btn_incluir_categorias = (Button) dialog.findViewById(R.id.button3);
+                    btn_incluir_categorias.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                        }
+                    });
+                }
+                return true;
             }
         });
         //*/
@@ -239,6 +300,8 @@ class AlbumAdapter extends BaseAdapter {
                     convertView = LayoutInflater.from(activity).inflate(
                             R.layout.imagen_layout, parent, false);
 
+                    convertView.setId(Function.ID_IMAGE);
+
                     holder.galleryImage = (ImageView) convertView.findViewById(R.id.galleryImage);
                     holder.gallery_title = (TextView) convertView.findViewById(R.id.gallery_title);
                     holder.galleryImage.setId(position);
@@ -248,6 +311,8 @@ class AlbumAdapter extends BaseAdapter {
                 {
                     convertView = LayoutInflater.from(activity).inflate(
                             R.layout.video_layout, parent, false);
+
+                    convertView.setId(Function.ID_VIDEO);
 
                     holder.galleryVideo = (VideoView) convertView.findViewById(R.id.galleryImage);
                     holder.gallery_title = (TextView) convertView.findViewById(R.id.gallery_title);
@@ -259,7 +324,7 @@ class AlbumAdapter extends BaseAdapter {
             {
                 convertView = LayoutInflater.from(activity).inflate(
                         R.layout.album_layout, parent, false);
-
+                convertView.setId(Function.ID_ALBUM);
                 holder.galleryImage = (ImageView) convertView.findViewById(R.id.galleryImage);
                 holder.gallery_count = (TextView) convertView.findViewById(R.id.gallery_count);
                 holder.gallery_title = (TextView) convertView.findViewById(R.id.gallery_title);

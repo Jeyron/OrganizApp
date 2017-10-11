@@ -5,7 +5,7 @@
     android:orientation="vertical" >
 
     <TextView
-        android:text="@string/nuevo_album"
+        android:id="@+id/lblTitulo"
         android:layout_width="300dp"
         android:layout_height="100dp"
         android:background="@color/colorFondo"

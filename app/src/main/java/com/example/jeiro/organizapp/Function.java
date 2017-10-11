@@ -1,5 +1,6 @@
 package com.example.jeiro.organizapp;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.database.Cursor;
@@ -21,7 +22,7 @@ import java.util.HashMap;
  * Created by SHAJIB on 7/16/2017.
  */
 
-class Function {
+public class Function {
 
 
     static final String KEY_ALBUM = "album_name";
@@ -33,10 +34,9 @@ class Function {
     static final String VIDEO_TYPE = "video";
     static final String ALBUM = "album";
     static final String CONTENIDO = "contenido";
-    static final int    ID_IMAGE  = 0;
-    static final int    ID_VIDEO  = 1;
-    static final int    ID_ALBUM  = 2;
-
+    static final int    ID_IMAGE  = 1;
+    static final int    ID_VIDEO  = 2;
+    static final int    ID_ALBUM  = 3;
 
     public static HashMap<String, String> mappingInbox(String album, String path, String count, String tipo, String tipo_contenido)
     {
@@ -91,6 +91,20 @@ class Function {
         }
 
         else return false;
+    }
+
+    public static boolean rename_album (String path, String ex_name, String name)
+    {
+        File oldfolder = new File(path,ex_name);
+        File newfolder = new File(path,name);
+        try
+        {
+            oldfolder.renameTo(newfolder);
+            return true;
+        }
+        catch (Exception e) {
+            return false;
+        }
     }
 
     public static boolean delete_album (String path, String name)
