@@ -60,6 +60,7 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="10dp"
                 android:inputType="textPersonName"
+                android:text="admin"
                 android:singleLine="true" />
             <TextView
                 android:id="@+id/textView4"
@@ -81,6 +82,7 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="10dp"
                 android:ems="10"
+                android:text="admin"
                 android:inputType="textPassword" />
             <Button
                 android:id="@+id/btn_iniciar_sesion"
@@ -123,12 +125,6 @@
                 android:layout_marginBottom="15dp"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true" />
-
-
-
-
-
-
         </RelativeLayout>
 
     </LinearLayout>

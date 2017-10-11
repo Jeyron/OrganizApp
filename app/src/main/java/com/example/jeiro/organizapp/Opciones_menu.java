@@ -1,9 +1,13 @@
 package com.example.jeiro.organizapp;
 
 import android.content.Context;
+import android.content.ContextWrapper;
+import android.content.res.Resources;
+import android.os.Environment;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
@@ -12,30 +16,23 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
+import android.widget.Toast;
 
-import android.widget.TextView;
+import com.example.jeiro.organizapp.Datos.*;
+import com.example.jeiro.organizapp.Modelo.*;
 
-public class Opciones_menu extends AppCompatActivity {
+import java.io.File;
 
-    /**
-     * The {@link android.support.v4.view.PagerAdapter} that will provide
-     * fragments for each of the sections. We use a
-     * {@link FragmentPagerAdapter} derivative, which will keep every
-     * loaded fragment in memory. If this becomes too memory intensive, it
-     * may be best to switch to a
-     * {@link android.support.v4.app.FragmentStatePagerAdapter}.
-     */
+public class Opciones_menu extends AppCompatActivity implements InputNameDialogFragment.InputNameDialogListener {
+
     private SectionsPagerAdapter mSectionsPagerAdapter;
 
-    /**
-     * The {@link ViewPager} that will host the section contents.
-     */
     private ViewPager mViewPager;
+    private static int seccion_actual;
+    public static String root_usuario;
+    public static String padre = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,13 +40,40 @@ public class Opciones_menu extends AppCompatActivity {
         setContentView(R.layout.activity_opciones_menu);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        // Create the adapter that will return a fragment for each of the three
-        // primary sections of the activity.
-        mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
+        //Toast.makeText(this,"Ruta " + MainActivity.root , Toast.LENGTH_SHORT).show();
+        setTitle(MainActivity.usuario_activo.getNombre());
 
-        // Set up the ViewPager with the sections adapter.
+        //*
+        File carpetaContenedora = new File(MainActivity.root, MainActivity.usuario_activo.getUsuario());
+        if (Function.crear_album(MainActivity.root, MainActivity.usuario_activo.getUsuario()))
+        {
+            Toast.makeText(this,"Carpeta base creada", Toast.LENGTH_SHORT).show();
+        }
+        root_usuario = carpetaContenedora.getAbsolutePath().toString();
+
+        Toast.makeText(this,"Ruta " + root_usuario, Toast.LENGTH_SHORT).show();
+        //*/
+
+        mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
+        mViewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position)
+            {
+                seccion_actual = position;
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
@@ -58,12 +82,68 @@ public class Opciones_menu extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                if(seccion_actual == 1)
+                {
+                    btnShowDialog(view);
+                    Snackbar.make(view, "Éxito, se ha creado un álbum", Snackbar.LENGTH_LONG).setAction("Action", null).show();
+                }
+                else
+                    Snackbar.make(view, "Error, no se puede crear un álbum", Snackbar.LENGTH_LONG).setAction("Action", null).show();
             }
         });
     }
 
+    public void btnShowDialog(View view) {
+        showInputNameDialog();
+    }
+
+    private void showInputNameDialog() {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        InputNameDialogFragment inputNameDialog = new InputNameDialogFragment();
+        inputNameDialog.setCancelable(false);
+        inputNameDialog.setDialogTitle("Nuevo álbum");
+        inputNameDialog.show(fragmentManager, "Input Dialog");
+    }
+
+    @Override
+    public void onFinishInputDialog(String inputText) {
+        try {
+
+            //*
+            if (inputText.equals(""))
+            {
+                Toast.makeText(this, "Error, nombre del nuevo álbum vacío",
+                        Toast.LENGTH_SHORT).show();
+                return;
+            }
+            datos_album datos = new datos_album();
+            Album album = new Album(padre,inputText,MainActivity.usuario_activo.getUsuario());
+            Toast.makeText(this, "Input Name to dialog: " + inputText,
+                    Toast.LENGTH_SHORT).show();
+            String path = root_usuario + datos.obtener_album_path(this, album);
+            //*
+            if(Function.crear_album(path, album.getNombre()))
+            {
+                if (datos.insertar_album(album, true, this))
+                    Toast.makeText(this, "Éxito, se ha creado un nuevo álbum", Toast.LENGTH_SHORT).show();
+                else
+                {
+                    Function.delete_album(path, album.getNombre());
+                    Toast.makeText(this, "Error, no ha sido posible crear el álbum", Toast.LENGTH_SHORT).show();
+                }
+            }
+            else
+            {
+                Toast.makeText(this, "Error, el álbum ya existe", Toast.LENGTH_SHORT).show();
+            }
+            //*/
+        }
+        catch (Exception e)
+        {
+            Toast.makeText(this,"Error, " + e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
+
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -72,60 +152,6 @@ public class Opciones_menu extends AppCompatActivity {
         return true;
     }
 
-    /*@Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }*/
-
-    /**
-     * A placeholder fragment containing a simple view.
-     */
-    public static class PlaceholderFragment extends Fragment {
-        /**
-         * The fragment argument representing the section number for this
-         * fragment.
-         */
-        private static final String ARG_SECTION_NUMBER = "section_number";
-
-        public PlaceholderFragment() {
-        }
-
-        /**
-         * Returns a new instance of this fragment for the given section
-         * number.
-         */
-        public static PlaceholderFragment newInstance(int sectionNumber) {
-            PlaceholderFragment fragment = new PlaceholderFragment();
-            Bundle args = new Bundle();
-            args.putInt(ARG_SECTION_NUMBER, sectionNumber);
-            fragment.setArguments(args);
-            return fragment;
-        }
-
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_opciones_menu, container, false);
-            TextView textView = (TextView) rootView.findViewById(R.id.section_label);
-            textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
-            return rootView;
-        }
-    }
-
-    /**
-     * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
-     * one of the sections/tabs/pages.
-     */
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
         public SectionsPagerAdapter(FragmentManager fm) {
@@ -134,33 +160,20 @@ public class Opciones_menu extends AppCompatActivity {
 
         @Override
         public Fragment getItem(int position) {
-            // getItem is called to instantiate the fragment for the given page.
-            // Return a PlaceholderFragment (defined as a static inner class below).
-            return PlaceholderFragment.newInstance(position + 1);
-            /*switch (position) {
+            switch (position) {
                 case 0:
-                    Fragment_albumes fragment_albumes = new Fragment_albumes();
-                    return fragment_albumes;
+                    return Fragment_capturas.newInstance("Galería");
                 case 1:
-                    Fragment_Navegacion fragment_navegacion = new Fragment_Navegacion();
-                    return fragment_navegacion;
-                case 2:
-                    Fragment_camara fragment_camara = new Fragment_camara();
-                    return fragment_camara;
-                case 3:
-                    Fragment_importar fragment_importar = new Fragment_importar();
-                    return "Importar";
-                case 4:
-                    Fragment_capturas fragment_capturas = new Fragment_capturas();
-                    return "Capturas";
+                    return Fragment_albumes.newInstance("Álbumes");
+                default:
+                    return Fragment_albumes.newInstance("Álbumes");
             }
-            return null;*/
         }
 
         @Override
-        public int getCount() {
-            // Show 3 total pages.
-            return 3;
+        public int getCount()
+        {
+            return 2;
         }
 
         @Override
@@ -170,8 +183,6 @@ public class Opciones_menu extends AppCompatActivity {
                     return "Fotos";
                 case 1:
                     return "Albumes";
-                case 2:
-                    return "Importar";
             }
             return null;
         }

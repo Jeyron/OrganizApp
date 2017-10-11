@@ -1,7 +1,11 @@
 package com.example.jeiro.organizapp;
 
+import android.Manifest;
+import android.content.Context;
+import android.content.ContextWrapper;
 import android.content.Intent;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,12 +15,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+
 import com.example.jeiro.organizapp.Modelo.*;
 import com.example.jeiro.organizapp.Datos.*;
 
-import java.util.ArrayList;
+import java.io.File;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity
+{
+    public static String  root;
     public static Usuario usuario_activo;
 
     @Override
@@ -26,6 +33,15 @@ public class MainActivity extends AppCompatActivity {
 
         ActionBar actionBar = getSupportActionBar();  // se elimina la barra del activity para que se vea mejor la interfaz
         actionBar.hide();
+
+        ContextWrapper context = new ContextWrapper(getApplicationContext());
+        File carpetaContenedora = context.getDir( "OrganizApp", Context.MODE_PRIVATE);
+        if (!carpetaContenedora.exists())
+        {
+            carpetaContenedora.mkdirs();
+            Toast.makeText(this,"Carpeta base creada", Toast.LENGTH_SHORT).show();
+        }
+        root = carpetaContenedora.getAbsolutePath().toString();
     }
 
     /**
@@ -56,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
                 Snackbar.make(v, "Error, contraseña incorrecta", Snackbar.LENGTH_LONG).setAction("Action", null).show();
                 return;
             }
-            Toast.makeText(this,"Bienvenido " + usuario_activo.getNombre(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"Bienvenido " + usuario_activo.getNombre().toLowerCase(), Toast.LENGTH_SHORT).show();
             Intent intent= new Intent(MainActivity.this, Opciones_menu.class);
             startActivity(intent);
         }

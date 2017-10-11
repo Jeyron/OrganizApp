@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class Album
 {
     private int    Id;
-    private Album  Padre;
+    private String  Padre;
     private String Nombre;
     private String Usuario;
     private ArrayList<Album> Albums;
@@ -17,7 +17,7 @@ public class Album
 
     public Album() {}
 
-    public Album(Album padre, String nombre, String usuario) {
+    public Album(String padre, String nombre, String usuario) {
         Padre = padre;
         Nombre = nombre;
         Usuario = usuario;
@@ -25,10 +25,9 @@ public class Album
 
     public Album(int id, String padre, String nombre, String usuario)
     {
-        Padre = new Album();
 
         Id = id;
-        Padre.setNombre(padre);
+        Padre = padre;
         Nombre = nombre;
         Usuario = usuario;
     }
@@ -41,11 +40,11 @@ public class Album
         Id = id;
     }
 
-    public Album getPadre() {
+    public String getPadre() {
         return Padre;
     }
 
-    public void setPadre(Album padre) {
+    public void setPadre(String padre) {
         Padre = padre;
     }
 

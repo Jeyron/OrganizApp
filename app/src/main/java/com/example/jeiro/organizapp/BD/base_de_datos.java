@@ -53,6 +53,21 @@ public class base_de_datos extends SQLiteOpenHelper
                     tablas.tabla_contenido.COLUMN_NAME_NOMBRE + TEXT_TYPE +
                     " )";
 
+    private static final String INSERTAR_USUARIO =
+            "INSERT INTO " +
+                    tablas.tabla_usuario.TABLE_NAME +
+                    "(" +
+                        tablas.tabla_usuario.COLUMN_NAME_USUARIO + "," +
+                        tablas.tabla_usuario.COLUMN_NAME_PASSWORD+ "," +
+                        tablas.tabla_usuario.COLUMN_NAME_NOMBRE +
+                    ")" +
+                    "VALUES" +
+                        "(" +
+                            "\"admin\"," +
+                            "\"admin\", " +
+                            "\"Administrador del sistema\"" +
+                        ");";
+
     private static final String DELETE_TABLA_CONTENIDO =
             "DROP TABLE IF EXISTS " + tablas.tabla_contenido.TABLE_NAME;
 
@@ -68,6 +83,7 @@ public class base_de_datos extends SQLiteOpenHelper
         db.execSQL(CREAR_TABLA_USUARIO);
         db.execSQL(CREAR_TABLA_ALBUM);
         db.execSQL(CREAR_TABLA_CONTENIDO);
+        db.execSQL(INSERTAR_USUARIO);
     }
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion)
     {
