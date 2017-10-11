@@ -25,12 +25,11 @@ import com.example.jeiro.organizapp.Modelo.*;
 
 import java.io.File;
 
-public class Opciones_menu extends AppCompatActivity implements InputNameDialogFragment.InputNameDialogListener {
+public class Opciones_menu extends AppCompatActivity {
 
     private SectionsPagerAdapter mSectionsPagerAdapter;
 
     private ViewPager mViewPager;
-    private static int seccion_actual;
     public static String root_usuario;
     public static String padre = "";
 
@@ -51,98 +50,20 @@ public class Opciones_menu extends AppCompatActivity implements InputNameDialogF
         }
         root_usuario = carpetaContenedora.getAbsolutePath().toString();
 
-        Toast.makeText(this,"Ruta " + root_usuario, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this,"Ruta " + root_usuario, Toast.LENGTH_SHORT).show();
         //*/
 
-        mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
-        mViewPager = (ViewPager) findViewById(R.id.container);
-        mViewPager.setAdapter(mSectionsPagerAdapter);
-        mViewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
-            }
-
-            @Override
-            public void onPageSelected(int position)
-            {
-                seccion_actual = position;
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int state) {
-
-            }
-        });
+        set_view_adapter();
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(seccion_actual == 1)
-                {
-                    btnShowDialog(view);
-                    Snackbar.make(view, "Éxito, se ha creado un álbum", Snackbar.LENGTH_LONG).setAction("Action", null).show();
-                }
-                else
-                    Snackbar.make(view, "Error, no se puede crear un álbum", Snackbar.LENGTH_LONG).setAction("Action", null).show();
-            }
-        });
     }
 
-    public void btnShowDialog(View view) {
-        showInputNameDialog();
-    }
-
-    private void showInputNameDialog() {
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        InputNameDialogFragment inputNameDialog = new InputNameDialogFragment();
-        inputNameDialog.setCancelable(false);
-        inputNameDialog.setDialogTitle("Nuevo álbum");
-        inputNameDialog.show(fragmentManager, "Input Dialog");
-    }
-
-    @Override
-    public void onFinishInputDialog(String inputText) {
-        try {
-
-            //*
-            if (inputText.equals(""))
-            {
-                Toast.makeText(this, "Error, nombre del nuevo álbum vacío",
-                        Toast.LENGTH_SHORT).show();
-                return;
-            }
-            datos_album datos = new datos_album();
-            Album album = new Album(padre,inputText,MainActivity.usuario_activo.getUsuario());
-            Toast.makeText(this, "Input Name to dialog: " + inputText,
-                    Toast.LENGTH_SHORT).show();
-            String path = root_usuario + datos.obtener_album_path(this, album);
-            //*
-            if(Function.crear_album(path, album.getNombre()))
-            {
-                if (datos.insertar_album(album, true, this))
-                    Toast.makeText(this, "Éxito, se ha creado un nuevo álbum", Toast.LENGTH_SHORT).show();
-                else
-                {
-                    Function.delete_album(path, album.getNombre());
-                    Toast.makeText(this, "Error, no ha sido posible crear el álbum", Toast.LENGTH_SHORT).show();
-                }
-            }
-            else
-            {
-                Toast.makeText(this, "Error, el álbum ya existe", Toast.LENGTH_SHORT).show();
-            }
-            //*/
-        }
-        catch (Exception e)
-        {
-            Toast.makeText(this,"Error, " + e.getMessage(), Toast.LENGTH_SHORT).show();
-        }
-
+    private void set_view_adapter()
+    {
+        mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
+        mViewPager = (ViewPager) findViewById(R.id.container);
+        mViewPager.setAdapter(mSectionsPagerAdapter);
     }
 
     @Override

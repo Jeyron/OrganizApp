@@ -48,18 +48,23 @@ public class base_de_datos extends SQLiteOpenHelper
                     tablas.tabla_contenido.TABLE_NAME +
                     " (" +
                     tablas.tabla_contenido._ID + " INTEGER PRIMARY KEY," +
-                    tablas.tabla_contenido.COLUMN_NAME_PADRE + TEXT_TYPE + COMMA_SEP +
+                    tablas.tabla_contenido.COLUMN_NAME_PADRE + TEXT_TYPE +  COMMA_SEP +
                     tablas.tabla_contenido.COLUMN_NAME_TIPO   + TEXT_TYPE + COMMA_SEP +
-                    tablas.tabla_contenido.COLUMN_NAME_NOMBRE + TEXT_TYPE +
+                    tablas.tabla_contenido.COLUMN_NAME_NOMBRE + TEXT_TYPE + COMMA_SEP +
+                    tablas.tabla_usuario.COLUMN_NAME_USUARIO +
                     " )";
+
+    private static final String DELETE_TABLA_CONTENIDO =
+            "DROP TABLE IF EXISTS " + tablas.tabla_contenido.TABLE_NAME;
 
     private static final String INSERTAR_USUARIO =
             "INSERT INTO " +
                     tablas.tabla_usuario.TABLE_NAME +
                     "(" +
-                        tablas.tabla_usuario.COLUMN_NAME_USUARIO + "," +
-                        tablas.tabla_usuario.COLUMN_NAME_PASSWORD+ "," +
-                        tablas.tabla_usuario.COLUMN_NAME_NOMBRE +
+                        tablas.tabla_usuario.COLUMN_NAME_USUARIO  + COMMA_SEP +
+                        tablas.tabla_usuario.COLUMN_NAME_PASSWORD + COMMA_SEP +
+                        tablas.tabla_usuario.COLUMN_NAME_NOMBRE   +
+
                     ")" +
                     "VALUES" +
                         "(" +
@@ -67,9 +72,6 @@ public class base_de_datos extends SQLiteOpenHelper
                             "\"admin\", " +
                             "\"Administrador del sistema\"" +
                         ");";
-
-    private static final String DELETE_TABLA_CONTENIDO =
-            "DROP TABLE IF EXISTS " + tablas.tabla_contenido.TABLE_NAME;
 
     public static final int DATABASE_VERSION = 1;
     public static final String DATABASE_NAME = "OrganizApp.db";

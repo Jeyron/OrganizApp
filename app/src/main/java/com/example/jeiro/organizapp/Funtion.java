@@ -26,31 +26,26 @@ class Function {
 
     static final String KEY_ALBUM = "album_name";
     static final String KEY_PATH = "path";
-    static final String KEY_TIMESTAMP = "timestamp";
-    static final String KEY_TIME = "date";
+    static final String KEY_TIPO = "tipo";
     static final String KEY_COUNT = "date";
+    static final String KEY_TIPO_CONTENIDO = "tipo_contenido";
+    static final String PHOTO_TYPE = "foto";
+    static final String VIDEO_TYPE = "video";
+    static final String ALBUM = "album";
+    static final String CONTENIDO = "contenido";
+    static final int    ID_IMAGE  = 0;
+    static final int    ID_VIDEO  = 1;
+    static final int    ID_ALBUM  = 2;
 
 
-    public static  boolean hasPermissions(Context context, String... permissions) {
-        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && context != null && permissions != null) {
-            for (String permission : permissions) {
-                if (ActivityCompat.checkSelfPermission(context, permission) != PackageManager.PERMISSION_GRANTED) {
-                    return false;
-                }
-            }
-        }
-        return true;
-    }
-
-
-    public static HashMap<String, String> mappingInbox(String album, String path, String timestamp, String time, String count)
+    public static HashMap<String, String> mappingInbox(String album, String path, String count, String tipo, String tipo_contenido)
     {
         HashMap<String, String> map = new HashMap<String, String>();
         map.put(KEY_ALBUM, album);
         map.put(KEY_PATH, path);
-        map.put(KEY_TIMESTAMP, timestamp);
-        map.put(KEY_TIME, time);
         map.put(KEY_COUNT, count);
+        map.put(KEY_TIPO, tipo);
+        map.put(KEY_TIPO_CONTENIDO, tipo_contenido);
         return map;
     }
 

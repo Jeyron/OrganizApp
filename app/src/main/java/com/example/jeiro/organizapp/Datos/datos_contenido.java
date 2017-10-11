@@ -23,9 +23,10 @@ public class datos_contenido
         try
         {
             ContentValues values = new ContentValues();
-            values.put(tablas.tabla_contenido.COLUMN_NAME_PADRE,  contenido.getPadre().getNombre());
+            values.put(tablas.tabla_contenido.COLUMN_NAME_PADRE,  contenido.getPadre());
             values.put(tablas.tabla_contenido.COLUMN_NAME_TIPO,   contenido.getTipo());
             values.put(tablas.tabla_contenido.COLUMN_NAME_NOMBRE, contenido.getNombre());
+            values.put(tablas.tabla_contenido.COLUMN_NAME_USUARIO, contenido.getUsuario());
             if (insertar) // insertar
             {
                 SQLiteDatabase db = helper.getWritableDatabase();
@@ -67,7 +68,7 @@ public class datos_contenido
             if (c.moveToFirst())
                 do
                 {
-                    Contenido a = new Contenido(c.getInt(0), c.getString(1), c.getString(2), c.getString(3));
+                    Contenido a = new Contenido(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4));
                     datos.add(a);
                 } while (c.moveToNext());
         }
@@ -78,6 +79,19 @@ public class datos_contenido
         }
         db.close();
         return datos;
+    }
+
+    public ArrayList<Contenido> obtener_contenido_por_album (Context context, Album album)
+    {
+        ArrayList<Contenido> datos = obtener_contenidos(context);
+        ArrayList<Contenido> resultado = new ArrayList<>();
+        for(int i = 0; i < datos.size(); i++)
+        {
+            Contenido temp = datos.get(i);
+            if(temp.getPadre().equals(album.getPadre()) && temp.getUsuario().equals(album.getUsuario()))
+                resultado.add(temp);
+        }
+        return resultado;
     }
 
     public boolean eliminar_contenido (Contenido contenido, Context context)

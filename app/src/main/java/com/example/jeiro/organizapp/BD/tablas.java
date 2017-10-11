@@ -29,9 +29,10 @@ public final class tablas
 
     public static class tabla_contenido implements BaseColumns
     {
-        public static final String TABLE_NAME         = "Contenido";    //
-        public static final String COLUMN_NAME_PADRE  = "Padre";        // 1
-        public static final String COLUMN_NAME_TIPO   = "Tipo";         // 2
-        public static final String COLUMN_NAME_NOMBRE = "Nombre";       // 3
+        public static final String TABLE_NAME          = "Contenido";    //
+        public static final String COLUMN_NAME_PADRE   = "Padre";        // 1
+        public static final String COLUMN_NAME_TIPO    = "Tipo";         // 2
+        public static final String COLUMN_NAME_NOMBRE  = "Nombre";       // 3
+        public static final String COLUMN_NAME_USUARIO = "Usuario";      // 4
     }
 }

@@ -93,7 +93,7 @@ public class datos_album
         return null;
     }
 
-    public ArrayList<Album> obtener_albums_hijos (Context context, Album album)
+    public ArrayList<Album> obtener_albums_por_album(Context context, Album album)
     {
         ArrayList<Album> datos = obtener_albums(context);
         ArrayList<Album> resultado = new ArrayList<>();

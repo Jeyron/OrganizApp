@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity
                 Snackbar.make(v, "Error, contraseña incorrecta", Snackbar.LENGTH_LONG).setAction("Action", null).show();
                 return;
             }
-            Toast.makeText(this,"Bienvenido " + usuario_activo.getNombre().toLowerCase(), Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this,"Bienvenido " + usuario_activo.getNombre().toLowerCase(), Toast.LENGTH_SHORT).show();
             Intent intent= new Intent(MainActivity.this, Opciones_menu.class);
             startActivity(intent);
         }
