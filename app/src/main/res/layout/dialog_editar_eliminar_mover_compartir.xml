@@ -46,5 +46,15 @@
         android:textStyle="bold"
         android:text="Mover" />
 
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#FFFFBB33"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:text="Compartir" />
+
 
 </LinearLayout>

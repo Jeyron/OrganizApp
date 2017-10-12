@@ -10,9 +10,7 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -75,10 +73,10 @@ public class Fragment_albumes extends Fragment
                 dialog.setContentView(R.layout.dialog_obtener);
 
                 TextView text = (TextView) dialog.findViewById(R.id.lblTitulo);
-                text.setText(getResources().getString(R.string.nuevo_album));
+                text.setText(getResources().getString(R.string.lbl_nuevo_album));
 
                 Button btn1 = (Button)dialog.findViewById(R.id.btnObtener);
-                btn1.setText(getResources().getString(R.string.btn_agregar_album));
+                btn1.setText(getResources().getString(R.string.btn_agregar));
                 btn1.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v)
@@ -215,7 +213,7 @@ public class Fragment_albumes extends Fragment
 
     private void set_adapter()
     {
-        Toast.makeText(getActivity(),"Albums " + albumList.size(), Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getActivity(),"Albums " + albumList.size(), Toast.LENGTH_SHORT).show();
         //galleryGridView.setAdapter(null);
         AlbumAdapter adapter = new AlbumAdapter(getActivity(), albumList);
         galleryGridView.setAdapter(adapter);
@@ -234,7 +232,7 @@ public class Fragment_albumes extends Fragment
                     set_adapter();
                     getActivity().setTitle(MainActivity.padre);
                 }
-                Toast.makeText(getActivity(),"view_id " + view.getId() + " - " + id , Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getActivity(),"view_id " + view.getId() + " - " + id , Toast.LENGTH_SHORT).show();
             }
         });
         galleryGridView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
@@ -256,9 +254,69 @@ public class Fragment_albumes extends Fragment
                         @Override
                         public void onClick(View v)
                         {
-                            //btnShowDialog(v);
-                            cargar_grid_view();
-                            set_adapter();
+                            final Dialog dialog = new Dialog(getActivity());
+                            dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                            dialog.setContentView(R.layout.dialog_obtener);
+
+                            TextView text = (TextView) dialog.findViewById(R.id.lblTitulo);
+                            text.setText(getResources().getString(R.string.lbl_renombrar_album));
+
+                            Button btn1 = (Button)dialog.findViewById(R.id.btnObtener);
+                            btn1.setText(getResources().getString(R.string.btn_Renombrar));
+                            btn1.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v)
+                                {
+                                    EditText text = (EditText) dialog.findViewById(R.id.txtName);
+                                    try {
+                                        //*
+                                        String inputText = text.getText().toString();
+                                        if (inputText.equals("")) {
+                                            Toast.makeText(getActivity(), "Error, el nuevo nombre está vacío",
+                                                    Toast.LENGTH_SHORT).show();
+                                            return;
+                                        }
+                                        Toast.makeText(getActivity(), "Input Name to dialog: " + inputText,
+                                                Toast.LENGTH_SHORT).show();
+
+                                        datos_album datos = new datos_album();
+                                        Album album = new Album(MainActivity.padre, inputText, MainActivity.usuario_activo.getUsuario());
+
+                                        if (datos.obtener_album(getActivity(), album) != null) {
+                                            Toast.makeText(getActivity(), "Error, nuevo nombre en uso",
+                                                    Toast.LENGTH_SHORT).show();
+                                            return;
+                                        }
+                                        //*
+                                        String path = MainActivity.root_usuario + datos.obtener_album_path(getActivity(), album);
+                                        if (Function.rename_album(path, MainActivity.string_temporal, album.getNombre())) {
+                                            if (datos.insertar_album(album, true, getActivity()))
+                                            {
+                                                album = new Album(MainActivity.padre, MainActivity.string_temporal, MainActivity.usuario_activo.getUsuario());
+                                                datos.rename_album(album,getActivity());
+                                                MainActivity.string_temporal = null;
+                                                Toast.makeText(getActivity(), "Éxito, se ha creado un nuevo álbum", Toast.LENGTH_SHORT).show();
+                                                cargar_grid_view();
+                                                set_adapter();
+                                                dialog.dismiss();
+                                            }
+                                            else {
+                                                Function.delete_album(path, album.getNombre());
+                                                Toast.makeText(getActivity(), "Error, no ha sido posible crear el álbum", Toast.LENGTH_SHORT).show();
+                                                return;
+                                            }
+                                        } else {
+                                            Toast.makeText(getContext(), "Error, el álbum ya existe", Toast.LENGTH_SHORT).show();
+                                            return;
+                                        }
+                                        //*/
+                                    } catch (Exception e) {
+                                        Toast.makeText(getActivity(), "Error, " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                                        return;
+                                    }
+                                }
+                            });
+                            dialog.dismiss();
                         }
                     });
 
@@ -273,7 +331,7 @@ public class Fragment_albumes extends Fragment
                     {
                     final Dialog dialog = new Dialog(getActivity());
                     dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-                    dialog.setContentView(R.layout.dialog_editar_eliminar_mover);
+                    dialog.setContentView(R.layout.dialog_editar_eliminar_mover_compartir);
                     dialog.show();
 
                     final Button btn_reset = (Button) dialog.findViewById(R.id.button);
