@@ -35,7 +35,7 @@ public class Registrar_usuario extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    void registrar_usuario(View v)
+    public void registrar_usuario(View v)
     {
         try {
             String password = ((EditText) findViewById(R.id.txt_contraseña_registro)).getText().toString();
@@ -45,28 +45,27 @@ public class Registrar_usuario extends AppCompatActivity {
 
             //*
             if (!password.equals(password_confirmar)) {
-                Snackbar.make(v, "Error, contraseñas diferentes", Snackbar.LENGTH_LONG).setAction("Action", null).show();
+                Toast.makeText(this,getResources().getString(R.string.toast_error_contra_diferentes), Toast.LENGTH_SHORT).show();
                 return;
             }
             if (password.equals("") || password_confirmar.equals("") || nombre_completo.equals("") || usuario.equals("")) {
-                Snackbar.make(v, "Error, algunos espacios vacíos", Snackbar.LENGTH_LONG).setAction("Action", null).show();
+                Toast.makeText(this,getResources().getString(R.string.toast_espacio_vacio), Toast.LENGTH_SHORT).show();
                 return;
             }
             Usuario temp = new Usuario(usuario, password, nombre_completo);
             datos_usuario datos_usuario = new datos_usuario();
             if (datos_usuario.insertar_usuario(temp, true, this)) {
-                Toast.makeText(this,"Éxito, datos de usuario guardados", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this,getResources().getString(R.string.toast_se_registro), Toast.LENGTH_SHORT).show();
                 this.finish();
             }
             else
             {
-                Snackbar.make(v, "Error, no ha sido posible guardar los datos", Snackbar.LENGTH_LONG).setAction("Action", null).show();
+                Toast.makeText(this,getResources().getString(R.string.toast_no_se_guardan), Toast.LENGTH_SHORT).show();
             }
-            //*/
         }
         catch (Exception e)
         {
-            Snackbar.make(v, "Error, " + e.getMessage(), Snackbar.LENGTH_LONG).setAction("Action", null).show();
+            Toast.makeText(this,getResources().getString(R.string.toast_error) + e.getMessage(), Toast.LENGTH_SHORT).show();
         }
     }
 

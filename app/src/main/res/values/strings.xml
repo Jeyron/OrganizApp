@@ -26,7 +26,31 @@
     <string name="btnEditar"> Editar </string>
     <string name="btnEliminar"> Eliminar </string>
 
-    btnEditar
+    <string name="toast_carpeta_creada"> Carpeta base creada </string>
+    <string name="toast_espacio_vacio">  Error, algún espacio vacío </string>
+    <string name="toast_contraseña_incorrecta"> Error, contraseña incorrecta </string>
+    <string name="toast_no_encontrado"> Error, No se ha encontrado el usuario </string>
+    <string name="toast_se_registro"> Éxito, datos de usuario guardados </string>
+    <string name="toast_no_se_guardan"> Error, no ha sido posible guardar los datos </string>
+    <string name="toast_error"> Error </string>
+    <string name="toast_error_contra_diferentes"> Error, contraseñas diferentes </string>
+
+
+    <string name="toast_nombre_album_vacio"> Error, nombre del nuevo álbum vacío </string>
+    <string name="toast_name_dialog"> Input Name to dialog: </string>
+    <string name="toast_ya_existe_album"> Error, el álbum ya existe </string>
+
+
+    <string name="toast_se_creo_album"> Éxito, se ha creado un álbum </string>
+    <string name="toast_no_se_creo_album"> Error, no ha sido posible crear el álbum </string>
+    <string name="toast_nuevo_nombre_vacio"> Error, el nuevo nombre está vacío </string>
+
+    <string name="toast_nombre_uso"> Error, nuevo nombre en uso </string>
+
+    <string name="toast_se_elimino_album"> Éxito, se ha eliminado álbum </string>
+    <string name="toast_no_posible_eliminar_album"> Error, no ha sido posible eliminar el álbum </string>
+    <string name="toast_no_existe"> Error, el álbum no existe </string>
+
 
 
     <string name="hello_blank_fragment">Hello blank fragment</string>

@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity
         if (!carpetaContenedora.exists())
         {
             carpetaContenedora.mkdirs();
-            Toast.makeText(this,"Carpeta base creada", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,getResources().getString(R.string.toast_carpeta_creada), Toast.LENGTH_SHORT).show();
         }
         root = carpetaContenedora.getAbsolutePath().toString();
     }
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity
 
         if (usuario.equals("") || password.equals(""))
         {
-            Toast.makeText(this,"Error, algún espacio vacío", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,getResources().getString(R.string.toast_espacio_vacio), Toast.LENGTH_SHORT).show();
             return;
         }
         Usuario temp = new Usuario();
@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity
             usuario_activo = temp;
             if(!usuario_activo.getPassword().equals(password))
             {
-                Snackbar.make(v, "Error, contraseña incorrecta", Snackbar.LENGTH_LONG).setAction("Action", null).show();
+                Toast.makeText(this, getResources().getString(R.string.toast_contraseña_incorrecta), Toast.LENGTH_SHORT).show();
                 return;
             }
             //Toast.makeText(this,"Bienvenido " + usuario_activo.getNombre().toLowerCase(), Toast.LENGTH_SHORT).show();
@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity
         }
         else
         {
-            Snackbar.make(v, "Error, No se ha encontrado el usuario", Snackbar.LENGTH_LONG).setAction("Action", null).show();
+            Toast.makeText(this, getResources().getString(R.string.toast_no_encontrado), Toast.LENGTH_SHORT).show();
         }
     }
 

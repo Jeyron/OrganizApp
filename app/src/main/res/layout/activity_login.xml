@@ -5,6 +5,10 @@
     android:layout_height="match_parent"
     tools:context="com.example.jeiro.organizapp.MainActivity">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -36,9 +40,10 @@
 
         </LinearLayout>
 
+
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="405dp">
 
             <TextView
                 android:id="@+id/txt_nombre_usuario_login"
@@ -128,4 +133,7 @@
         </RelativeLayout>
 
     </LinearLayout>
+
+    </ScrollView>
+
 </RelativeLayout>

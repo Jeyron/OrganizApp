@@ -87,11 +87,11 @@ public class Fragment_albumes extends Fragment
                             String inputText = text.getText().toString();
                             if (inputText.equals(""))
                             {
-                                Toast.makeText(getActivity(), "Error, nombre del nuevo álbum vacío",
+                                Toast.makeText(getActivity(),getResources().getString(R.string.toast_nombre_album_vacio),
                                         Toast.LENGTH_SHORT).show();
                                 return;
                             }
-                            Toast.makeText(getActivity(), "Input Name to dialog: " + inputText,
+                            Toast.makeText(getActivity(),getResources().getString(R.string.toast_name_dialog) + inputText,
                                     Toast.LENGTH_SHORT).show();
 
                             datos_album datos = new datos_album();
@@ -99,7 +99,7 @@ public class Fragment_albumes extends Fragment
 
                             if(datos.obtener_album(getActivity(), album) != null)
                             {
-                                Toast.makeText(getActivity(), "Error, el álbum ya existe",
+                                Toast.makeText(getActivity(), getResources().getString(R.string.toast_ya_existe_album),
                                         Toast.LENGTH_SHORT).show();
                                 return;
                             }
@@ -110,7 +110,7 @@ public class Fragment_albumes extends Fragment
                             {
                                 if (datos.insertar_album(album, true, getActivity()))
                                 {
-                                    Toast.makeText(getActivity(), "Éxito, se ha creado un álbum", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(getActivity(),getResources().getString(R.string.toast_se_creo_album), Toast.LENGTH_SHORT).show();
                                     cargar_grid_view();
                                     set_adapter();
                                     dialog.dismiss();
@@ -118,20 +118,22 @@ public class Fragment_albumes extends Fragment
                                 else
                                 {
                                     Function.delete_album(path, album.getNombre());
-                                    Toast.makeText(getActivity(), "Error, no ha sido posible crear el álbum", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(getActivity(),getResources().getString(R.string.toast_no_se_creo_album), Toast.LENGTH_SHORT).show();
                                     return;
                                 }
                             }
                             else
                             {
-                                Toast.makeText(getContext(), "Error, el álbum ya existe", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getActivity(), getResources().getString(R.string.toast_ya_existe_album),
+                                        Toast.LENGTH_SHORT).show();
                                 return;
                             }
                             //*/
                         }
                         catch (Exception e)
                         {
-                            Toast.makeText(getActivity(),"Error, " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getActivity(),getResources().getString(R.string.toast_error) + e.getMessage(),
+                                    Toast.LENGTH_SHORT).show();
                         }
                         dialog.dismiss();
                     }
@@ -260,11 +262,11 @@ public class Fragment_albumes extends Fragment
                             //*
                             String inputText = text.getText().toString();
                             if (inputText.equals("")) {
-                                Toast.makeText(getActivity(), "Error, el nuevo nombre está vacío",
+                                Toast.makeText(getActivity(), getResources().getString(R.string.toast_nuevo_nombre_vacio),
                                         Toast.LENGTH_SHORT).show();
                                 return;
                             }
-                            Toast.makeText(getActivity(), "Input Name to dialog: " + inputText,
+                            Toast.makeText(getActivity(), getResources().getString(R.string.toast_name_dialog)  + inputText,
                                     Toast.LENGTH_SHORT).show();
 
                             datos_album datos = new datos_album();
@@ -273,7 +275,7 @@ public class Fragment_albumes extends Fragment
                             album_nuevo.setNombre(inputText);
 
                             if (datos.obtener_album(getActivity(), album_nuevo) != null) {
-                                Toast.makeText(getActivity(), "Error, nuevo nombre en uso",
+                                Toast.makeText(getActivity(), getResources().getString(R.string.toast_nombre_uso),
                                         Toast.LENGTH_SHORT).show();
                                 return;
                             }
@@ -283,23 +285,23 @@ public class Fragment_albumes extends Fragment
                                 if (datos.rename_album(album_nuevo,album_anterior,getActivity()))
                                 {
                                     MainActivity.string_temporal = null;
-                                    Toast.makeText(getActivity(), "Éxito, se ha creado un nuevo álbum", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(getActivity(), getResources().getString(R.string.toast_se_creo_album), Toast.LENGTH_SHORT).show();
                                     cargar_grid_view();
                                     set_adapter();
                                     dialog.dismiss();
                                 }
                                 else {
                                     Function.delete_album(path, album_anterior.getNombre());
-                                    Toast.makeText(getActivity(), "Error, no ha sido posible crear el álbum", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(getActivity(), getResources().getString(R.string.toast_no_se_creo_album), Toast.LENGTH_SHORT).show();
                                     return;
                                 }
                             } else {
-                                Toast.makeText(getContext(), "Error, el álbum ya existe", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getContext(), getResources().getString(R.string.toast_ya_existe_album), Toast.LENGTH_SHORT).show();
                                 return;
                             }
                             //*/
                         } catch (Exception e) {
-                            Toast.makeText(getActivity(), "Error, " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getActivity(), getResources().getString(R.string.toast_error) + e.getMessage(), Toast.LENGTH_SHORT).show();
                             return;
                         }
                         dialog.dismiss();
@@ -321,24 +323,24 @@ public class Fragment_albumes extends Fragment
                                     if (datos.eliminar_album(temp,getActivity()))
                                     {
                                         MainActivity.string_temporal = null;
-                                        Toast.makeText(getActivity(), "Éxito, se ha eliminado álbum", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(getActivity(),getResources().getString(R.string.toast_se_elimino_album), Toast.LENGTH_SHORT).show();
                                         cargar_grid_view();
                                         set_adapter();
                                         dialog.dismiss();
                                     }
                                     else {
-                                        Toast.makeText(getActivity(), "Error, no ha sido posible eliminar el álbum", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(getActivity(),getResources().getString(R.string.toast_no_posible_eliminar_album), Toast.LENGTH_SHORT).show();
                                         return;
                                     }
                                 }
                                 else
                                 {
-                                    Toast.makeText(getContext(), "Error, el álbum no existe", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(getContext(),getResources().getString(R.string.toast_no_existe), Toast.LENGTH_SHORT).show();
                                 }
                             }
                             catch (Exception e)
                             {
-                                Toast.makeText(getActivity(),"Error, " + e.getMessage() , Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getActivity(), getResources().getString(R.string.toast_error) + e.getMessage() , Toast.LENGTH_SHORT).show();
                             }
                             //Toast.makeText(getActivity(),"view_id " + v.getId() , Toast.LENGTH_SHORT).show();
                             dialog.dismiss();

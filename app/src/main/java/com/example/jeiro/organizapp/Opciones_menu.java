@@ -33,7 +33,7 @@ public class Opciones_menu extends AppCompatActivity {
         File carpetaContenedora = new File(MainActivity.root, MainActivity.usuario_activo.getUsuario());
         if (Function.crear_album(MainActivity.root, MainActivity.usuario_activo.getUsuario()))
         {
-            Toast.makeText(this,"Carpeta base creada", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,getResources().getString(R.string.toast_carpeta_creada), Toast.LENGTH_SHORT).show();
         }
         MainActivity.root_usuario = carpetaContenedora.getAbsolutePath().toString();
 
