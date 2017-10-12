@@ -60,6 +60,7 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="10dp"
                 android:inputType="textPersonName"
+                android:text="admin"
                 android:singleLine="true" />
             <TextView
                 android:id="@+id/textView4"
@@ -81,6 +82,7 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="10dp"
                 android:ems="10"
+                android:text="admin"
                 android:inputType="textPassword" />
             <Button
                 android:id="@+id/btn_iniciar_sesion"
@@ -94,7 +96,9 @@
                 android:background="@drawable/boton_redondeado"
                 android:textSize="15dp"
                 android:textColor="@color/colorBlanco"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:onClick="iniciar_sesion"
+                />
             <Button
                 android:id="@+id/btn_registrarse"
                 android:layout_width="wrap_content"
@@ -106,7 +110,9 @@
                 android:textColor="@color/colorPrimary"
                 android:textStyle="bold|italic"
                 android:layout_below="@+id/btn_iniciar_sesion"
-                android:layout_centerHorizontal="true"/>
+                android:layout_centerHorizontal="true"
+                android:onClick="registrar_usuario"
+                />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -119,12 +125,6 @@
                 android:layout_marginBottom="15dp"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true" />
-
-
-
-
-
-
         </RelativeLayout>
 
     </LinearLayout>

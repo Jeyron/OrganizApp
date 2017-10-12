@@ -1,5 +1,9 @@
 [
     {
+        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",
+        "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\anim\\abc_popup_exit.xml"
+    },
+    {
         "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
         "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\anim\\abc_fade_in.xml"
     },
@@ -12,20 +16,20 @@
         "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
     },
     {
+        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
+        "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\anim\\abc_fade_in.xml"
+    },
+    {
         "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",
         "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\anim\\abc_popup_exit.xml"
     },
     {
-        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
-        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\anim\\abc_fade_out.xml"
+        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
+        "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\anim\\abc_slide_in_bottom.xml"
     },
     {
         "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
         "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\anim\\abc_slide_out_bottom.xml"
-    },
-    {
-        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
-        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\anim\\abc_slide_in_bottom.xml"
     },
     {
         "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
@@ -36,15 +40,59 @@
         "source": "C:\\Users\\jeiro\\.android\\build-cache\\8534b746d633bb1e51d585b10798f16c181aeca4\\output\\res\\anim\\design_snackbar_in.xml"
     },
     {
+        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
+        "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\anim\\abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
+        "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\anim\\abc_popup_enter.xml"
+    },
+    {
+        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_in.xml",
+        "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\82efef09e85fdd497f86d857808f048c7bf3e7f0\\output\\res\\anim\\design_snackbar_in.xml"
+    },
+    {
+        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_out.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\8534b746d633bb1e51d585b10798f16c181aeca4\\output\\res\\anim\\design_snackbar_out.xml"
+    },
+    {
         "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
         "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
+        "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\anim\\abc_slide_in_top.xml"
+    },
+    {
+        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_out.xml",
+        "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\82efef09e85fdd497f86d857808f048c7bf3e7f0\\output\\res\\anim\\design_snackbar_out.xml"
+    },
+    {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\anim\\abc_fade_out.xml"
+    },
+    {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\anim\\abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
+        "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\anim\\abc_slide_out_top.xml"
     },
     {
         "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
         "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\anim\\abc_slide_in_top.xml"
     },
     {
-        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_out.xml",
-        "source": "C:\\Users\\jeiro\\.android\\build-cache\\8534b746d633bb1e51d585b10798f16c181aeca4\\output\\res\\anim\\design_snackbar_out.xml"
+        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
+        "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\anim\\abc_fade_out.xml"
     }
 ]

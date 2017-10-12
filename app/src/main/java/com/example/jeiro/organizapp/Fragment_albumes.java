@@ -115,18 +115,19 @@ public class Fragment_albumes extends Fragment
                                     Toast.makeText(getActivity(), "Éxito, se ha creado un álbum", Toast.LENGTH_SHORT).show();
                                     cargar_grid_view();
                                     set_adapter();
+                                    return;
                                 }
                                 else
                                 {
                                     Function.delete_album(path, album.getNombre());
                                     Toast.makeText(getActivity(), "Error, no ha sido posible crear el álbum", Toast.LENGTH_SHORT).show();
-                                    dialog.dismiss();
+                                    return;
                                 }
                             }
                             else
                             {
                                 Toast.makeText(getContext(), "Error, el álbum ya existe", Toast.LENGTH_SHORT).show();
-                                dialog.dismiss();
+                                return;
                             }
                             //*/
                         }
@@ -137,7 +138,6 @@ public class Fragment_albumes extends Fragment
                         dialog.dismiss();
                     }
                 });
-
                 dialog.show();
             }
         });
