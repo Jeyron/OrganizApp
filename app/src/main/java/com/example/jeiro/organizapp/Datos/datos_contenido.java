@@ -88,7 +88,7 @@ public class datos_contenido
         for(int i = 0; i < datos.size(); i++)
         {
             Contenido temp = datos.get(i);
-            if(temp.getPadre().equals(album.getPadre()) && temp.getUsuario().equals(album.getUsuario()))
+            if(temp.getPadre().equals(album.getNombre()) && temp.getUsuario().equals(album.getUsuario()))
                 resultado.add(temp);
         }
         return resultado;

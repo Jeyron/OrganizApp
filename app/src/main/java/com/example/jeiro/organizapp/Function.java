@@ -38,6 +38,17 @@ public class Function {
     static final int    ID_VIDEO  = 2;
     static final int    ID_ALBUM  = 3;
 
+    public static  boolean hasPermissions(Context context, String... permissions) {
+        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && context != null && permissions != null) {
+            for (String permission : permissions) {
+                if (ActivityCompat.checkSelfPermission(context, permission) != PackageManager.PERMISSION_GRANTED) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
     public static HashMap<String, String> mappingInbox(String album, String path, String count, String tipo, String tipo_contenido)
     {
         HashMap<String, String> map = new HashMap<String, String>();
@@ -110,7 +121,7 @@ public class Function {
     public static boolean delete_album (String path, String name)
     {
         File directorio = new File(path, name);
-        if (!directorio.exists())
+        if (directorio.exists())
         {
             delete_album_Recursive(directorio);
             return true;

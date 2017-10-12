@@ -2,6 +2,7 @@ package com.example.jeiro.organizapp;
 
 import android.app.Activity;
 import android.app.Dialog;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
@@ -64,8 +65,29 @@ public class Fragment_albumes extends Fragment
             galleryGridView.setColumnWidth(Math.round(px));
         }
 
-        FloatingActionButton fab = (FloatingActionButton) v.findViewById(R.id.add_album);
+        FloatingActionButton fab = (FloatingActionButton) v.findViewById(R.id.add_video);
         fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(getActivity(), capturar_video.class);
+                startActivity(intent);
+                getActivity().finish();
+            }
+        });
+
+        FloatingActionButton fab1 = (FloatingActionButton) v.findViewById(R.id.add_photo);
+        fab1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(getActivity(), capturar_foto.class);
+                startActivity(intent);
+                getActivity().finish();
+            }
+        });
+
+
+        FloatingActionButton fab2 = (FloatingActionButton) v.findViewById(R.id.add_album);
+        fab2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 final Dialog dialog = new Dialog(getActivity());
@@ -105,7 +127,7 @@ public class Fragment_albumes extends Fragment
                             }
                             //*
 
-                            String path = MainActivity.root_usuario + datos.obtener_album_path(getActivity(), album);
+                            String path = MainActivity.root_usuario + File.separator + datos.obtener_album_path(getActivity(), album);
                             if(Function.crear_album(path, album.getNombre()))
                             {
                                 if (datos.insertar_album(album, true, getActivity()))
@@ -142,7 +164,8 @@ public class Fragment_albumes extends Fragment
             }
         });
 
-        MainActivity.padre = "";
+        //MainActivity.padre = "";
+        getActivity().setTitle(MainActivity.usuario_activo.getUsuario());
 
         //Toast.makeText(getActivity(),"todo parece bien", Toast.LENGTH_SHORT).show();
         cargar_grid_view();
@@ -186,13 +209,14 @@ public class Fragment_albumes extends Fragment
         {
             Album temp = l_albums.get(i);
             name = temp.getNombre();                         // 1
-            if(l_contenido.size() != 0)
-                path = MainActivity.root_usuario + File.separator + d_album.obtener_album_path(getActivity(),new Album(l_contenido.get(0).getPadre(),"","")) + l_contenido.get(0).getNombre();
+            ArrayList<Contenido> content = d_contenido.obtener_contenido_por_album(getActivity(),temp);
+            if(content.size() != 0)
+                path = MainActivity.root_usuario + File.separator + d_album.obtener_album_path(getActivity(),new Album(content.get(0).getPadre(),"","")) + content.get(0).getNombre();
             else
                 path = "";                                         // 2
             // File acr = new File(Opciones_menu.root_usuario + path, temp.getNombre());
 
-            countPhoto = Integer.toString(d_album.obtener_albums_por_album(getActivity(),temp).size());     // 3
+            countPhoto = Integer.toString(content.size());     // 3
             tipo = Function.ALBUM;                                            // 4
             tipo_contenido = "";                                   // 5
 
@@ -204,7 +228,7 @@ public class Fragment_albumes extends Fragment
         {
             Contenido temp = l_contenido.get(i);
             name = temp.getNombre();
-            path = MainActivity.root_usuario + File.separator + d_album.obtener_album_path(getActivity(),new Album(temp.getPadre(),"","")) + temp.getNombre();
+            path = MainActivity.root_usuario + File.separator + d_album.obtener_album_path(getActivity(),new Album(temp.getPadre(),"",MainActivity.usuario_activo.getUsuario())) + temp.getNombre();
             tipo = Function.CONTENIDO;
             countPhoto = "";
             tipo_contenido = temp.getTipo();
@@ -280,7 +304,7 @@ public class Fragment_albumes extends Fragment
                                 return;
                             }
                             //*
-                            String path = MainActivity.root_usuario + datos.obtener_album_path(getActivity(), album_anterior);
+                            String path = MainActivity.root_usuario + File.separator + datos.obtener_album_path(getActivity(), album_anterior);
                             if (Function.rename_album(path, album_anterior.getNombre(), album_nuevo.getNombre())) {
                                 if (datos.rename_album(album_nuevo,album_anterior,getActivity()))
                                 {
@@ -317,7 +341,7 @@ public class Fragment_albumes extends Fragment
                             {
                                 datos_album datos = new datos_album();
                                 Album temp = datos.obtener_album(getActivity(),new Album(MainActivity.padre,MainActivity.string_temporal,MainActivity.usuario_activo.getUsuario()));
-                                String path = datos.obtener_album_path(getActivity(), temp);
+                                String path = MainActivity.root_usuario + File.separator + datos.obtener_album_path(getActivity(), temp);
                                 if(Function.delete_album(path,temp.getNombre()))
                                 {
                                     if (datos.eliminar_album(temp,getActivity()))
@@ -342,7 +366,6 @@ public class Fragment_albumes extends Fragment
                             {
                                 Toast.makeText(getActivity(), getResources().getString(R.string.toast_error) + e.getMessage() , Toast.LENGTH_SHORT).show();
                             }
-                            //Toast.makeText(getActivity(),"view_id " + v.getId() , Toast.LENGTH_SHORT).show();
                             dialog.dismiss();
                         }
                     });

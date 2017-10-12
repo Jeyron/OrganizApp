@@ -1,5 +1,6 @@
 package com.example.jeiro.organizapp;
 
+import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -11,6 +12,9 @@ import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 import android.view.Menu;
 import android.widget.Toast;
+
+import com.example.jeiro.organizapp.Datos.datos_album;
+import com.example.jeiro.organizapp.Modelo.Album;
 
 import java.io.File;
 
@@ -54,6 +58,21 @@ public class Opciones_menu extends AppCompatActivity {
     }
 
     @Override
+    public void onBackPressed()
+    {
+        if(MainActivity.padre.equals(""))
+            finish();
+        else {
+            datos_album datos = new datos_album();
+            Album a = datos.obtener_album(this, new Album("", MainActivity.padre, ""));
+            MainActivity.padre = a.getPadre();
+            if(MainActivity.padre.equals(""))
+                setTitle(MainActivity.usuario_activo.getUsuario());
+            set_view_adapter();
+        }
+    }
+
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_opciones_menu, menu);
@@ -70,9 +89,9 @@ public class Opciones_menu extends AppCompatActivity {
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-                    return Fragment_capturas.newInstance("Galería");
-                case 1:
                     return Fragment_albumes.newInstance("Álbumes");
+                case 1:
+                    return Fragment_capturas.newInstance("Galería");
                 default:
                     return Fragment_albumes.newInstance("Álbumes");
             }
@@ -88,9 +107,9 @@ public class Opciones_menu extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "Fotos";
-                case 1:
                     return "Albumes";
+                case 1:
+                    return "Fotos";
             }
             return null;
         }

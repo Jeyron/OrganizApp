@@ -4,6 +4,7 @@ import android.Manifest;
 import android.content.Context;
 import android.content.ContextWrapper;
 import android.content.Intent;
+import android.os.Environment;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.ActionBar;
@@ -23,6 +24,7 @@ import java.io.File;
 
 public class MainActivity extends AppCompatActivity
 {
+    static final int REQUEST_PERMISSION_KEY = 1;
     public static String  root;
     public static Usuario usuario_activo;
     public static String root_usuario;
@@ -37,8 +39,14 @@ public class MainActivity extends AppCompatActivity
         ActionBar actionBar = getSupportActionBar();  // se elimina la barra del activity para que se vea mejor la interfaz
         actionBar.hide();
 
+        String[] PERMISSIONS = {Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.CAMERA};
+        if(!Function.hasPermissions(this, PERMISSIONS)){
+            ActivityCompat.requestPermissions(this, PERMISSIONS, REQUEST_PERMISSION_KEY);
+        }
+
         ContextWrapper context = new ContextWrapper(getApplicationContext());
-        File carpetaContenedora = context.getDir( "OrganizApp", Context.MODE_PRIVATE);
+        File carpetaContenedora = new File(getExternalFilesDir(null), "OrganizApp");//context.getDir( "OrganizApp", Context.MODE_PRIVATE);
+
         if (!carpetaContenedora.exists())
         {
             carpetaContenedora.mkdirs();
@@ -46,6 +54,8 @@ public class MainActivity extends AppCompatActivity
         }
         root = carpetaContenedora.getAbsolutePath().toString();
     }
+
+
 
     /**
      *
