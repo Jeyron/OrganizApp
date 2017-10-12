@@ -113,7 +113,7 @@ public class Fragment_albumes extends Fragment
                                     Toast.makeText(getActivity(), "Éxito, se ha creado un álbum", Toast.LENGTH_SHORT).show();
                                     cargar_grid_view();
                                     set_adapter();
-                                    return;
+                                    dialog.dismiss();
                                 }
                                 else
                                 {
@@ -244,88 +244,108 @@ public class Fragment_albumes extends Fragment
                 {
                     AlbumViewHolder a = (AlbumViewHolder)view.getTag();
                     MainActivity.string_temporal = a.gallery_title.getText().toString();
-                    Dialog dialog = new Dialog(getActivity());
+                    final Dialog dialog = new Dialog(getActivity());
                     dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
                     dialog.setContentView(R.layout.dialog_editar_eliminar);
-                    dialog.show();
+                    TextView txt = (TextView) dialog.findViewById(R.id.dialog_title);
+                    txt.setText("Álbum opciones");
 
-                    Button btn_reset = (Button)dialog.findViewById(R.id.btnEditar);
-                    btn_reset.setOnClickListener(new View.OnClickListener() {
+                    Button btn1 = (Button)dialog.findViewById(R.id.btnEditar);
+                    btn1.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v)
                         {
-                            final Dialog dialog = new Dialog(getActivity());
-                            dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-                            dialog.setContentView(R.layout.dialog_obtener);
+                        EditText text = (EditText) dialog.findViewById(R.id.txtName);
+                        try {
+                            //*
+                            String inputText = text.getText().toString();
+                            if (inputText.equals("")) {
+                                Toast.makeText(getActivity(), "Error, el nuevo nombre está vacío",
+                                        Toast.LENGTH_SHORT).show();
+                                return;
+                            }
+                            Toast.makeText(getActivity(), "Input Name to dialog: " + inputText,
+                                    Toast.LENGTH_SHORT).show();
 
-                            TextView text = (TextView) dialog.findViewById(R.id.lblTitulo);
-                            text.setText(getResources().getString(R.string.lbl_renombrar_album));
+                            datos_album datos = new datos_album();
+                            Album album_anterior = new Album(MainActivity.padre, MainActivity.string_temporal, MainActivity.usuario_activo.getUsuario());
+                            Album album_nuevo = datos.obtener_album(getActivity(), new Album(MainActivity.padre, MainActivity.string_temporal, MainActivity.usuario_activo.getUsuario()));
+                            album_nuevo.setNombre(inputText);
 
-                            Button btn1 = (Button)dialog.findViewById(R.id.btnObtener);
-                            btn1.setText(getResources().getString(R.string.btn_Renombrar));
-                            btn1.setOnClickListener(new View.OnClickListener() {
-                                @Override
-                                public void onClick(View v)
+                            if (datos.obtener_album(getActivity(), album_nuevo) != null) {
+                                Toast.makeText(getActivity(), "Error, nuevo nombre en uso",
+                                        Toast.LENGTH_SHORT).show();
+                                return;
+                            }
+                            //*
+                            String path = MainActivity.root_usuario + datos.obtener_album_path(getActivity(), album_anterior);
+                            if (Function.rename_album(path, album_anterior.getNombre(), album_nuevo.getNombre())) {
+                                if (datos.rename_album(album_nuevo,album_anterior,getActivity()))
                                 {
-                                    EditText text = (EditText) dialog.findViewById(R.id.txtName);
-                                    try {
-                                        //*
-                                        String inputText = text.getText().toString();
-                                        if (inputText.equals("")) {
-                                            Toast.makeText(getActivity(), "Error, el nuevo nombre está vacío",
-                                                    Toast.LENGTH_SHORT).show();
-                                            return;
-                                        }
-                                        Toast.makeText(getActivity(), "Input Name to dialog: " + inputText,
-                                                Toast.LENGTH_SHORT).show();
+                                    MainActivity.string_temporal = null;
+                                    Toast.makeText(getActivity(), "Éxito, se ha creado un nuevo álbum", Toast.LENGTH_SHORT).show();
+                                    cargar_grid_view();
+                                    set_adapter();
+                                    dialog.dismiss();
+                                }
+                                else {
+                                    Function.delete_album(path, album_anterior.getNombre());
+                                    Toast.makeText(getActivity(), "Error, no ha sido posible crear el álbum", Toast.LENGTH_SHORT).show();
+                                    return;
+                                }
+                            } else {
+                                Toast.makeText(getContext(), "Error, el álbum ya existe", Toast.LENGTH_SHORT).show();
+                                return;
+                            }
+                            //*/
+                        } catch (Exception e) {
+                            Toast.makeText(getActivity(), "Error, " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                            return;
+                        }
+                        dialog.dismiss();
+                        }
+                    });
 
-                                        datos_album datos = new datos_album();
-                                        Album album = new Album(MainActivity.padre, inputText, MainActivity.usuario_activo.getUsuario());
-
-                                        if (datos.obtener_album(getActivity(), album) != null) {
-                                            Toast.makeText(getActivity(), "Error, nuevo nombre en uso",
-                                                    Toast.LENGTH_SHORT).show();
-                                            return;
-                                        }
-                                        //*
-                                        String path = MainActivity.root_usuario + datos.obtener_album_path(getActivity(), album);
-                                        if (Function.rename_album(path, MainActivity.string_temporal, album.getNombre())) {
-                                            if (datos.insertar_album(album, true, getActivity()))
-                                            {
-                                                album = new Album(MainActivity.padre, MainActivity.string_temporal, MainActivity.usuario_activo.getUsuario());
-                                                datos.rename_album(album,getActivity());
-                                                MainActivity.string_temporal = null;
-                                                Toast.makeText(getActivity(), "Éxito, se ha creado un nuevo álbum", Toast.LENGTH_SHORT).show();
-                                                cargar_grid_view();
-                                                set_adapter();
-                                                dialog.dismiss();
-                                            }
-                                            else {
-                                                Function.delete_album(path, album.getNombre());
-                                                Toast.makeText(getActivity(), "Error, no ha sido posible crear el álbum", Toast.LENGTH_SHORT).show();
-                                                return;
-                                            }
-                                        } else {
-                                            Toast.makeText(getContext(), "Error, el álbum ya existe", Toast.LENGTH_SHORT).show();
-                                            return;
-                                        }
-                                        //*/
-                                    } catch (Exception e) {
-                                        Toast.makeText(getActivity(), "Error, " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                    Button btn2 = (Button)dialog.findViewById(R.id.btnEliminar);
+                    btn2.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v)
+                        {
+                            try
+                            {
+                                datos_album datos = new datos_album();
+                                Album temp = datos.obtener_album(getActivity(),new Album(MainActivity.padre,MainActivity.string_temporal,MainActivity.usuario_activo.getUsuario()));
+                                String path = datos.obtener_album_path(getActivity(), temp);
+                                if(Function.delete_album(path,temp.getNombre()))
+                                {
+                                    if (datos.eliminar_album(temp,getActivity()))
+                                    {
+                                        MainActivity.string_temporal = null;
+                                        Toast.makeText(getActivity(), "Éxito, se ha eliminado álbum", Toast.LENGTH_SHORT).show();
+                                        cargar_grid_view();
+                                        set_adapter();
+                                        dialog.dismiss();
+                                    }
+                                    else {
+                                        Toast.makeText(getActivity(), "Error, no ha sido posible eliminar el álbum", Toast.LENGTH_SHORT).show();
                                         return;
                                     }
                                 }
-                            });
+                                else
+                                {
+                                    Toast.makeText(getContext(), "Error, el álbum no existe", Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                            catch (Exception e)
+                            {
+                                Toast.makeText(getActivity(),"Error, " + e.getMessage() , Toast.LENGTH_SHORT).show();
+                            }
+                            //Toast.makeText(getActivity(),"view_id " + v.getId() , Toast.LENGTH_SHORT).show();
                             dialog.dismiss();
                         }
                     });
 
-                    Button btn_ingresos = (Button)dialog.findViewById(R.id.btnEliminar);
-                    btn_ingresos.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                        }
-                    });
+                    dialog.show();
                 }
                 else
                     {
@@ -406,9 +426,7 @@ class AlbumAdapter extends BaseAdapter {
                     convertView.setId(Function.ID_IMAGE);
 
                     holder.galleryImage = (ImageView) convertView.findViewById(R.id.galleryImage);
-                    holder.gallery_title = (TextView) convertView.findViewById(R.id.gallery_title);
                     holder.galleryImage.setId(position);
-                    holder.gallery_title.setId(position);
                 }
                 else
                 {
@@ -418,9 +436,7 @@ class AlbumAdapter extends BaseAdapter {
                     convertView.setId(Function.ID_VIDEO);
 
                     holder.galleryVideo = (VideoView) convertView.findViewById(R.id.galleryImage);
-                    holder.gallery_title = (TextView) convertView.findViewById(R.id.gallery_title);
                     holder.galleryVideo.setId(position);
-                    holder.gallery_title.setId(position);
                 }
             }
             else
@@ -443,8 +459,10 @@ class AlbumAdapter extends BaseAdapter {
         try {
 
             if(tipo.equals(Function.ALBUM))
+            {
                 holder.gallery_count.setText(song.get(Function.KEY_COUNT));
-            holder.gallery_title.setText(song.get(Function.KEY_ALBUM));
+                holder.gallery_title.setText(song.get(Function.KEY_ALBUM));
+            }
 
             String path = song.get(Function.KEY_PATH);
 

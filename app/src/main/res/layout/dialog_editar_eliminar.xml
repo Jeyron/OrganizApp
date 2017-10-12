@@ -14,6 +14,13 @@
         android:gravity="center"
         android:textSize="20dp"/>
 
+    <EditText
+        android:id="@+id/txtName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:imeOptions="actionDone"
+        android:inputType="text" />
 
     <Button
         android:id="@+id/btnEditar"
@@ -23,7 +30,7 @@
         android:background="#FFFFBB33"
         android:textColor="#fff"
         android:textStyle="bold"
-        android:text="Editar" />
+        android:text="Renombrar" />
 
     <Button
         android:id="@+id/btnEliminar"
