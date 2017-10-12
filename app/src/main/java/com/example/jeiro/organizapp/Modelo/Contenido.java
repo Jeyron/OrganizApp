@@ -7,25 +7,29 @@ package com.example.jeiro.organizapp.Modelo;
 public class Contenido
 {
     private int Id;
-    private Album Padre;
+    private String Padre;
     private String Tipo;
     private String Nombre;
+    private String Usuario;
+
 
     public Contenido() {}
 
-    public Contenido(Album padre, String tipo, String nombre) {
+    public Contenido(String padre, String tipo, String nombre, String usuario)
+    {
         Padre = padre;
         Tipo = tipo;
         Nombre = nombre;
+        Usuario = usuario;
     }
 
-    public Contenido(int id, String padre, String tipo, String nombre)
+    public Contenido(int id, String padre, String tipo, String nombre, String usuario)
     {
-        Padre = new Album();
         Id = id;
-        Padre.setNombre(padre);
+        Padre = padre;
         Tipo = tipo;
         Nombre = nombre;
+        Usuario = usuario;
     }
 
     public int getId() {
@@ -36,11 +40,11 @@ public class Contenido
         Id = id;
     }
 
-    public Album getPadre() {
+    public String getPadre() {
         return Padre;
     }
 
-    public void setPadre(Album padre) {
+    public void setPadre(String padre) {
         Padre = padre;
     }
 
@@ -59,4 +63,8 @@ public class Contenido
     public void setNombre(String nombre) {
         Nombre = nombre;
     }
+
+    public String getUsuario() { return Usuario; }
+
+    public void setUsuario(String usuario) { Usuario = usuario; }
 }

@@ -100,7 +100,7 @@ public class datos_album
         for (int i = 0; i < datos.size();i++)
         {
             Album temp = datos.get(i);
-            if(temp.getPadre().equals(album.getPadre()) && temp.getUsuario().equals(album.getUsuario()))
+            if(temp.getPadre().equals(album.getNombre()) && temp.getUsuario().equals(album.getUsuario()))
                 resultado.add(temp);
         }
         return resultado;
@@ -133,10 +133,19 @@ public class datos_album
         return path;
     }
 
-
-
     public boolean eliminar_album (Album album, Context context)
     {
+        ArrayList<Album> datos = obtener_albums_por_album(context,album);
+        datos_contenido d_contenido = new datos_contenido();
+        for(int i = 0; i < datos.size();i++)
+        {
+            ArrayList<Contenido> temp = d_contenido.obtener_contenido_por_album(context,datos.get(i));
+            for(int  j = 0; j < temp.size();j++)
+            {
+                d_contenido.eliminar_contenido(temp.get(j),context);
+            }
+            eliminar_album(datos.get(i),context);
+        }
         base_de_datos helper = new base_de_datos(context);
         try
         {
@@ -150,5 +159,21 @@ public class datos_album
             return false;
         }
         return true;
+    }
+
+    public void rename_album (Album album, Context context) {
+        ArrayList<Album> datos = obtener_albums_por_album(context, album);
+        datos_contenido d_contenido = new datos_contenido();
+        for (int i = 0; i < datos.size(); i++) {
+            ArrayList<Contenido> temp = d_contenido.obtener_contenido_por_album(context, datos.get(i));
+            for (int j = 0; j < temp.size(); j++) {
+                Contenido var = temp.get(j);
+                var.setPadre(album.getNombre());
+                d_contenido.insertar_contenido(var,false,context);
+            }
+            Album var = datos.get(i);
+            var.setPadre(album.getNombre());
+            insertar_album(var,false,context);
+        }
     }
 }

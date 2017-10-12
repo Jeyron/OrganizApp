@@ -40,13 +40,13 @@ public class Renombrar_album extends DialogFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle saveInstanceState) {
 
         View view = inflater.inflate(
-                R.layout.dialog_obtener_nombre, container);
+                R.layout.dialog_obtener, container);
 
         //---get the EditText and Button views
         txtname = (EditText) view.findViewById(R.id.txtName);
-        btnDone = (Button) view.findViewById(R.id.btnDone);
+        //btnDone = (Button) view.findViewById(R.id.btnDone);
         TextView t = (TextView) view.findViewById(R.id.lblTitulo);
-        t.setText(getResources().getString(R.string.renombrar_album));
+        t.setText(getResources().getString(R.string.btn_Renombrar_album));
 
         //---event handler for the button
         btnDone.setOnClickListener(new View.OnClickListener() {

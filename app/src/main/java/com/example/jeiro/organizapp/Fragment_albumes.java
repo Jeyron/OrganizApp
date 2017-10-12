@@ -21,6 +21,7 @@ import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -69,40 +70,84 @@ public class Fragment_albumes extends Fragment
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                btnShowDialog(view);
-                Snackbar.make(view, "Éxito, se ha creado un álbum", Snackbar.LENGTH_LONG).setAction("Action", null).show();
-                cargar_grid_view();
-                set_adapter();
+                final Dialog dialog = new Dialog(getActivity());
+                dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                dialog.setContentView(R.layout.dialog_obtener);
+
+                TextView text = (TextView) dialog.findViewById(R.id.lblTitulo);
+                text.setText(getResources().getString(R.string.nuevo_album));
+
+                Button btn1 = (Button)dialog.findViewById(R.id.btnObtener);
+                btn1.setText(getResources().getString(R.string.btn_agregar_album));
+                btn1.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v)
+                    {
+                        EditText text = (EditText) dialog.findViewById(R.id.txtName);
+                        try {
+                            //*
+                            String inputText = text.getText().toString();
+                            if (inputText.equals(""))
+                            {
+                                Toast.makeText(getActivity(), "Error, nombre del nuevo álbum vacío",
+                                        Toast.LENGTH_SHORT).show();
+                                return;
+                            }
+                            Toast.makeText(getActivity(), "Input Name to dialog: " + inputText,
+                                    Toast.LENGTH_SHORT).show();
+
+                            datos_album datos = new datos_album();
+                            Album album = new Album(MainActivity.padre,inputText,MainActivity.usuario_activo.getUsuario());
+
+                            if(datos.obtener_album(getActivity(), album) != null)
+                            {
+                                Toast.makeText(getActivity(), "Error, el álbum ya existe",
+                                        Toast.LENGTH_SHORT).show();
+                                return;
+                            }
+                            //*
+
+                            String path = MainActivity.root_usuario + datos.obtener_album_path(getActivity(), album);
+                            if(Function.crear_album(path, album.getNombre()))
+                            {
+                                if (datos.insertar_album(album, true, getActivity()))
+                                {
+                                    Toast.makeText(getActivity(), "Éxito, se ha creado un álbum", Toast.LENGTH_SHORT).show();
+                                    cargar_grid_view();
+                                    set_adapter();
+                                }
+                                else
+                                {
+                                    Function.delete_album(path, album.getNombre());
+                                    Toast.makeText(getActivity(), "Error, no ha sido posible crear el álbum", Toast.LENGTH_SHORT).show();
+                                    dialog.dismiss();
+                                }
+                            }
+                            else
+                            {
+                                Toast.makeText(getContext(), "Error, el álbum ya existe", Toast.LENGTH_SHORT).show();
+                                dialog.dismiss();
+                            }
+                            //*/
+                        }
+                        catch (Exception e)
+                        {
+                            Toast.makeText(getActivity(),"Error, " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                        dialog.dismiss();
+                    }
+                });
+
+                dialog.show();
             }
         });
 
         MainActivity.padre = "";
 
-        Toast.makeText(getActivity(),"todo parece bien", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getActivity(),"todo parece bien", Toast.LENGTH_SHORT).show();
         cargar_grid_view();
         set_adapter();
         return v;
-    }
-
-    public void btnShowDialog(View view) {
-        showInputNameDialog();
-    }
-
-    private void showInputNameDialog() {
-        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-        Nuevo_album inputNameDialog = new Nuevo_album();
-        inputNameDialog.setCancelable(false);
-        inputNameDialog.setDialogTitle("Nuevo álbum");
-        inputNameDialog.show(fragmentManager, "Input Dialog");
-    }
-
-    private void sleep ()
-    {
-        try {
-            Thread.sleep(10000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
     }
 
     public static Fragment_albumes newInstance(String text){
@@ -121,7 +166,7 @@ public class Fragment_albumes extends Fragment
     public void cargar_grid_view()
     {
         albumList.clear();
-        Toast.makeText(getActivity(),"Entra", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getActivity(),"Entra", Toast.LENGTH_SHORT).show();
         //sleep();
         datos_album d_album              = new datos_album();
         datos_contenido d_contenido      = new datos_contenido();
@@ -201,23 +246,23 @@ public class Fragment_albumes extends Fragment
                 {
                     AlbumViewHolder a = (AlbumViewHolder)view.getTag();
                     MainActivity.string_temporal = a.gallery_title.getText().toString();
-                    final Dialog dialog = new Dialog(getActivity());
+                    Dialog dialog = new Dialog(getActivity());
                     dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
                     dialog.setContentView(R.layout.dialog_editar_eliminar);
                     dialog.show();
 
-                    final Button btn_reset = (Button)dialog.findViewById(R.id.btnEditar);
+                    Button btn_reset = (Button)dialog.findViewById(R.id.btnEditar);
                     btn_reset.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v)
                         {
-                            btnShowDialog(v);
+                            //btnShowDialog(v);
                             cargar_grid_view();
                             set_adapter();
                         }
                     });
 
-                    final Button btn_ingresos = (Button)dialog.findViewById(R.id.btnEliminar);
+                    Button btn_ingresos = (Button)dialog.findViewById(R.id.btnEliminar);
                     btn_ingresos.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
