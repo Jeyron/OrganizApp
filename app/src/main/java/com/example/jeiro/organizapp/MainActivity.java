@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity
     public static String root_usuario;
     public static String padre = "";
     public static String string_temporal;
+    public static String tipoFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

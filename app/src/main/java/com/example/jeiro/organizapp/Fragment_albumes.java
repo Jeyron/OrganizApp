@@ -52,7 +52,7 @@ public class Fragment_albumes extends Fragment
 
         v = inflater.inflate(R.layout.fragment_fragment_albumes, container, false);
 
-        galleryGridView = (GridView) v.findViewById(R.id.galleryGridView);
+        galleryGridView = (GridView) v.findViewById(R.id.AlbumGridView);
         int iDisplayWidth = getResources().getDisplayMetrics().widthPixels ;
         Resources resources = getActivity().getApplicationContext().getResources();
         DisplayMetrics metrics = resources.getDisplayMetrics();
@@ -165,7 +165,7 @@ public class Fragment_albumes extends Fragment
         });
 
         //MainActivity.padre = "";
-        getActivity().setTitle(MainActivity.usuario_activo.getUsuario());
+        getActivity().setTitle(MainActivity.usuario_activo.getNombre());
 
         //Toast.makeText(getActivity(),"todo parece bien", Toast.LENGTH_SHORT).show();
         cargar_grid_view();
@@ -499,7 +499,7 @@ class AlbumAdapter extends BaseAdapter {
 
             if(path.equals(""))
                 Glide.with(activity)
-                        .load(R.drawable.folder) // Uri of the picture
+                        .load(R.drawable.album) // Uri of the picture
                         .into(holder.galleryImage);
             else
             {

@@ -146,6 +146,11 @@ public class datos_album
             }
             eliminar_album(datos.get(i),context);
         }
+        ArrayList<Contenido> temp = d_contenido.obtener_contenido_por_album(context,album);
+        for(int  j = 0; j < temp.size();j++)
+        {
+            d_contenido.eliminar_contenido(temp.get(j),context);
+        }
         base_de_datos helper = new base_de_datos(context);
         try
         {

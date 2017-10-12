@@ -32,7 +32,8 @@
             android:label="@string/title_activity_opciones_menu"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".capturar_foto" />
-        <activity android:name=".capturar_video"></activity>
+        <activity android:name=".capturar_video" />
+        <activity android:name=".GalleryPreview"></activity>
     </application>
 
 </manifest>

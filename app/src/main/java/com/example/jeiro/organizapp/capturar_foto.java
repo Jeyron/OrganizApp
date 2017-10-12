@@ -53,14 +53,20 @@ public class capturar_foto extends AppCompatActivity {
     }
 
     @Override
+    public void onBackPressed()
+    {
+        finish();
+    }
+
+    @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         try
         {
             mediaFile.createNewFile();
             datos_contenido content = new datos_contenido();
-            Contenido imagen = new Contenido(MainActivity.padre,Function.PHOTO_TYPE,name,MainActivity.usuario_activo.getUsuario());
-            content.insertar_contenido(imagen,true,this);
+            Contenido imagen = new Contenido(MainActivity.padre, Function.PHOTO_TYPE, name, MainActivity.usuario_activo.getUsuario());
+            content.insertar_contenido(imagen, true, this);
             Toast.makeText(this, "Éxito, la foto se guardó: " + mediaFile.getPath(), Toast.LENGTH_SHORT).show();
         } catch (IOException e)
         {

@@ -57,11 +57,13 @@ public class capturar_video extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         try
         {
-            mediaFile.createNewFile();
-            datos_contenido content = new datos_contenido();
-            Contenido imagen = new Contenido(MainActivity.padre,Function.VIDEO_TYPE,name,MainActivity.usuario_activo.getUsuario());
-            content.insertar_contenido(imagen,true,this);
-            Toast.makeText(this, "Éxito, la foto se guardó: " + mediaFile.getPath(), Toast.LENGTH_SHORT).show();
+            if(MediaStore.EXTRA_OUTPUT.isEmpty()) {
+                mediaFile.createNewFile();
+                datos_contenido content = new datos_contenido();
+                Contenido imagen = new Contenido(MainActivity.padre, Function.VIDEO_TYPE, name, MainActivity.usuario_activo.getUsuario());
+                content.insertar_contenido(imagen, true, this);
+                Toast.makeText(this, "Éxito, la foto se guardó: " + mediaFile.getPath(), Toast.LENGTH_SHORT).show();
+            }
         } catch (IOException e)
         {
             Toast.makeText(this, "Error, no ha sido posible agregar la foto", Toast.LENGTH_SHORT).show();

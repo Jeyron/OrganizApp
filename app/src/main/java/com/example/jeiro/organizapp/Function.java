@@ -37,6 +37,8 @@ public class Function {
     static final int    ID_IMAGE  = 1;
     static final int    ID_VIDEO  = 2;
     static final int    ID_ALBUM  = 3;
+    static final String FRAGMENT_ALBUM = "album";
+    static final String FRAGMENT_IMAGE = "imagen";
 
     public static  boolean hasPermissions(Context context, String... permissions) {
         if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && context != null && permissions != null) {
