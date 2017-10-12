@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity
      *
      * @param v
      */
-    void iniciar_sesion(View v)
+    public void iniciar_sesion(View v)
     {
         String usuario = ((EditText)findViewById(R.id.txt_nombre_usuario)).getText().toString();
         String password = ((EditText)findViewById(R.id.txt_contraseña)).getText().toString();
@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity
      *
      * @param v
      */
-    void registrar_usuario (View v)
+    public void registrar_usuario (View v)
     {
         Intent intent= new Intent(MainActivity.this, Registrar_usuario.class);
         startActivity(intent);

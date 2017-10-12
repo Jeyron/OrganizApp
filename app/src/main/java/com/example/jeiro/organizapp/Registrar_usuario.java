@@ -69,4 +69,5 @@ public class Registrar_usuario extends AppCompatActivity {
             Snackbar.make(v, "Error, " + e.getMessage(), Snackbar.LENGTH_LONG).setAction("Action", null).show();
         }
     }
+
 }

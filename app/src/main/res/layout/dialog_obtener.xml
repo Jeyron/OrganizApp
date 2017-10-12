@@ -12,7 +12,7 @@
         android:background="@color/colorFondo"
         android:padding="10dp"
         android:gravity="center"
-        android:textSize="20dp"/>
+        android:textSize="20sp"/>
     <EditText
         android:id="@+id/txtName"
         android:layout_width="match_parent"
