@@ -167,15 +167,16 @@ public class datos_album
             ArrayList<Album> datos = obtener_albums_por_album(context, anterior);
             datos_contenido d_contenido = new datos_contenido();
             for (int i = 0; i < datos.size(); i++) {
-                ArrayList<Contenido> temp = d_contenido.obtener_contenido_por_album(context, datos.get(i));
-                for (int j = 0; j < temp.size(); j++) {
-                    Contenido var = temp.get(j);
-                    var.setPadre(nuevo.getNombre());
-                    d_contenido.insertar_contenido(var, false, context);
-                }
                 Album var = datos.get(i);
                 var.setPadre(nuevo.getNombre());
                 insertar_album(var, false, context);
+            }
+
+            ArrayList<Contenido> content = d_contenido.obtener_contenido_por_album(context,anterior);
+            for (int j = 0; j < content.size(); j++) {
+                Contenido var = content.get(j);
+                var.setPadre(nuevo.getNombre());
+                d_contenido.insertar_contenido(var, false, context);
             }
             insertar_album(nuevo,false,context);
 

@@ -211,7 +211,7 @@ public class Fragment_albumes extends Fragment
             name = temp.getNombre();                         // 1
             ArrayList<Contenido> content = d_contenido.obtener_contenido_por_album(getActivity(),temp);
             if(content.size() != 0)
-                path = MainActivity.root_usuario + File.separator + d_album.obtener_album_path(getActivity(),new Album(content.get(0).getPadre(),"","")) + content.get(0).getNombre();
+                path = MainActivity.root_usuario + d_album.obtener_album_path(getActivity(),new Album(content.get(0).getPadre(),"","")) + File.separator + content.get(0).getNombre();
             else
                 path = "";                                         // 2
             // File acr = new File(Opciones_menu.root_usuario + path, temp.getNombre());
@@ -228,7 +228,7 @@ public class Fragment_albumes extends Fragment
         {
             Contenido temp = l_contenido.get(i);
             name = temp.getNombre();
-            path = MainActivity.root_usuario + File.separator + d_album.obtener_album_path(getActivity(),new Album(temp.getPadre(),"",MainActivity.usuario_activo.getUsuario())) + temp.getNombre();
+            path = MainActivity.root_usuario + d_album.obtener_album_path(getActivity(),new Album(temp.getPadre(),"",MainActivity.usuario_activo.getUsuario()))+ File.separator + temp.getNombre();
             tipo = Function.CONTENIDO;
             countPhoto = "";
             tipo_contenido = temp.getTipo();
@@ -249,7 +249,7 @@ public class Fragment_albumes extends Fragment
                                     final int position, long id) {
 
                 int view_id = view.getId();
-                if(view_id == 3)
+                if(view_id == Function.ID_ALBUM)
                 {
                     AlbumViewHolder a = (AlbumViewHolder)view.getTag();
                     a.gallery_title.getText();
@@ -257,6 +257,12 @@ public class Fragment_albumes extends Fragment
                     cargar_grid_view();
                     set_adapter();
                     getActivity().setTitle(MainActivity.padre);
+                }
+                else if(view_id == Function.ID_IMAGE)
+                {
+                    Intent intent = new Intent(getActivity(), GalleryPreview.class);
+                    intent.putExtra("path", albumList.get(+position).get(Function.KEY_PATH));
+                    startActivity(intent);
                 }
                 //Toast.makeText(getActivity(),"view_id " + view.getId() + " - " + id , Toast.LENGTH_SHORT).show();
             }
@@ -485,7 +491,7 @@ class AlbumAdapter extends BaseAdapter {
 
             if(tipo.equals(Function.ALBUM))
             {
-                holder.gallery_count.setText(song.get(Function.KEY_COUNT));
+                holder.gallery_count.setText("Archivos " + song.get(Function.KEY_COUNT));
                 holder.gallery_title.setText(song.get(Function.KEY_ALBUM));
             }
 
