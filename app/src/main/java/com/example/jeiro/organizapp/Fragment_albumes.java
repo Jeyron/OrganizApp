@@ -7,6 +7,7 @@ import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.media.ThumbnailUtils;
+import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.annotation.Nullable;
@@ -404,6 +405,23 @@ public class Fragment_albumes extends Fragment
                         public void onClick(View v) {
                         }
                     });
+
+                    final Button btn_compartir_multimedia = (Button) dialog.findViewById(R.id.button4);
+                    btn_compartir_multimedia.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            //  AQUI VA EL PATH DE LA IMAGEN ESTO ES UNA IMAGEN QUEMADA XQ ESTOY PRBANDO
+                            Uri imagen= Uri.parse("android.resource:// drawable /" + Integer.toString(R.drawable.album));
+                            //
+                            Intent intent = new Intent(Intent.ACTION_SEND);
+                            intent.setType("image/*");
+                            String shareBody = "Dato principal, es el titulo";
+                            String shareSub = "Asunto, detalles";
+                            intent.putExtra(Intent.EXTRA_STREAM,imagen);
+                            intent.putExtra(Intent.EXTRA_TEXT, "Comentarios");
+                            startActivity(Intent.createChooser(intent, "Compartir Datos"));
+                        }
+                    });
                 }
                 return true;
             }
@@ -411,8 +429,6 @@ public class Fragment_albumes extends Fragment
         //*/
     }
 }
-
-
 
 
 
