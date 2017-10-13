@@ -16,7 +16,19 @@
         "source": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi\\logo.png",
+        "source": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\src\\main\\res\\mipmap-mdpi\\logo.png"
+    },
+    {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi\\ic_launcher_round.png",
+        "source": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
         "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi\\ic_launcher_round.png",
         "source": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi\\ic_launcher.png",
+        "source": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     }
 ]

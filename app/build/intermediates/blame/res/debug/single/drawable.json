@@ -4,10 +4,6 @@
         "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_list_selector_holo_light.xml"
     },
     {
-        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_snackbar_background.xml",
-        "source": "C:\\Users\\jeiro\\.android\\build-cache\\8534b746d633bb1e51d585b10798f16c181aeca4\\output\\res\\drawable\\design_snackbar_background.xml"
-    },
-    {
         "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",
         "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\drawable\\abc_list_selector_holo_dark.xml"
     },
@@ -16,96 +12,48 @@
         "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\drawable\\abc_seekbar_tick_mark_material.xml"
     },
     {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_go_search_api_material.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_ic_go_search_api_material.xml"
+    },
+    {
         "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\blank.png",
         "source": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\src\\main\\res\\drawable\\blank.png"
-    },
-    {
-        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
-        "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\drawable\\abc_spinner_textfield_background_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_fab_background.xml",
-        "source": "C:\\Users\\jeiro\\.android\\build-cache\\8534b746d633bb1e51d585b10798f16c181aeca4\\output\\res\\drawable\\design_fab_background.xml"
-    },
-    {
-        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_ab_back_material.xml",
-        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_ic_ab_back_material.xml"
     },
     {
         "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background.xml",
         "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\drawable\\abc_dialog_material_background.xml"
     },
     {
-        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_icon_background.xml",
-        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\notification_icon_background.xml"
-    },
-    {
-        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml",
-        "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml"
-    },
-    {
-        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_thumb_material.xml",
-        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_seekbar_thumb_material.xml"
-    },
-    {
-        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_vector_test.xml",
-        "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\drawable\\abc_vector_test.xml"
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\logo3.png",
+        "source": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\src\\main\\res\\drawable\\logo3.png"
     },
     {
         "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_icon_background.xml",
         "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\drawable\\notification_icon_background.xml"
     },
     {
-        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
-        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_vector_test.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_vector_test.xml"
     },
     {
         "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_material.xml",
         "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_ratingbar_material.xml"
     },
     {
-        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_borderless_material.xml",
-        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_btn_borderless_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\navigation_empty_icon.xml",
-        "source": "C:\\Users\\jeiro\\.android\\build-cache\\8534b746d633bb1e51d585b10798f16c181aeca4\\output\\res\\drawable\\navigation_empty_icon.xml"
-    },
-    {
-        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_thumb_material.xml",
-        "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\drawable\\abc_seekbar_thumb_material.xml"
-    },
-    {
         "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\folder.png",
         "source": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\src\\main\\res\\drawable\\folder.png"
     },
     {
-        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
-        "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\drawable\\abc_cab_background_internal_bg.xml"
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_borderless_material.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_btn_borderless_material.xml"
     },
     {
-        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_text_cursor_material.xml",
-        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_text_cursor_material.xml"
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_tick_mark_material.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_seekbar_tick_mark_material.xml"
     },
     {
         "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\logo.png",
         "source": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\src\\main\\res\\drawable\\logo.png"
-    },
-    {
-        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_bg_low.xml",
-        "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\drawable\\notification_bg_low.xml"
-    },
-    {
-        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_search_api_material.xml",
-        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_ic_search_api_material.xml"
-    },
-    {
-        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\album.png",
-        "source": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\src\\main\\res\\drawable\\album.png"
-    },
-    {
-        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",
-        "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\drawable\\abc_list_selector_holo_light.xml"
     },
     {
         "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_material.xml",
@@ -116,16 +64,20 @@
         "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\drawable\\abc_ic_clear_material.xml"
     },
     {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\logo1.png",
+        "source": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\src\\main\\res\\drawable\\logo1.png"
+    },
+    {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_voice_search_api_material.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_ic_voice_search_api_material.xml"
+    },
+    {
         "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_indicator_material.xml",
         "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_ratingbar_indicator_material.xml"
     },
     {
-        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
-        "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\drawable\\abc_item_background_holo_light.xml"
-    },
-    {
-        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_material.xml",
-        "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\drawable\\abc_ratingbar_material.xml"
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
     },
     {
         "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_copyright_black_24dp.xml",
@@ -140,48 +92,32 @@
         "source": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\src\\main\\res\\drawable\\boton_redondeado.xml"
     },
     {
-        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
-        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_tab_indicator_material.xml"
-    },
-    {
-        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\boton_presionado.xml",
-        "source": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\src\\main\\res\\drawable\\boton_presionado.xml"
-    },
-    {
         "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",
         "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_list_selector_holo_dark.xml"
     },
     {
-        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_go_search_api_material.xml",
-        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_ic_go_search_api_material.xml"
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_item_background_holo_dark.xml"
     },
     {
-        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_material.xml",
-        "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\drawable\\abc_btn_radio_material.xml"
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_bg_low.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\notification_bg_low.xml"
+    },
+    {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_bg.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\notification_bg.xml"
     },
     {
         "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
         "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_item_background_holo_light.xml"
     },
     {
-        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_small_material.xml",
-        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_ratingbar_small_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_tile_bg.xml",
-        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\notification_tile_bg.xml"
-    },
-    {
-        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\boton_presionado.xml",
-        "source": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\src\\main\\res\\drawable\\boton_presionado.xml"
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
     },
     {
         "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_switch_thumb_material.xml",
         "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_switch_thumb_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
-        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_item_background_holo_dark.xml"
     },
     {
         "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_copyright_black_24dp.xml",
@@ -196,16 +132,16 @@
         "source": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\src\\main\\res\\drawable\\boton_redondeado.xml"
     },
     {
-        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_ab_back_material.xml",
-        "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\drawable\\abc_ic_ab_back_material.xml"
-    },
-    {
         "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\logo1.png",
         "source": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\src\\main\\res\\drawable\\logo1.png"
     },
     {
         "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_tile_bg.xml",
         "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\drawable\\notification_tile_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_btn_check_material.xml"
     },
     {
         "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_track_material.xml",
@@ -220,12 +156,8 @@
         "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\notification_bg_low.xml"
     },
     {
-        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
-        "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
-    },
-    {
-        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_track_material.xml",
-        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_seekbar_track_material.xml"
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\folder.png",
+        "source": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\src\\main\\res\\drawable\\folder.png"
     },
     {
         "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_clear_material.xml",
@@ -236,8 +168,12 @@
         "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\drawable\\abc_textfield_search_material.xml"
     },
     {
-        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_go_search_api_material.xml",
-        "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\drawable\\abc_ic_go_search_api_material.xml"
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\navigation_empty_icon.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\8534b746d633bb1e51d585b10798f16c181aeca4\\output\\res\\drawable\\navigation_empty_icon.xml"
+    },
+    {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_text_cursor_material.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_text_cursor_material.xml"
     },
     {
         "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\logo2.png",
@@ -246,10 +182,6 @@
     {
         "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\logo2.png",
         "source": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\src\\main\\res\\drawable\\logo2.png"
-    },
-    {
-        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
-        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_cab_background_internal_bg.xml"
     },
     {
         "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
@@ -268,44 +200,32 @@
         "source": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\src\\main\\res\\drawable\\logo1.png"
     },
     {
-        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
-        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_borderless_material.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_btn_borderless_material.xml"
     },
     {
-        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_text_cursor_material.xml",
-        "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\drawable\\abc_text_cursor_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background.xml",
-        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_dialog_material_background.xml"
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_list_selector_holo_dark.xml"
     },
     {
         "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_indicator_material.xml",
         "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\drawable\\abc_ratingbar_indicator_material.xml"
     },
     {
-        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml",
-        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml"
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_copyright_black_24dp.xml",
+        "source": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\src\\main\\res\\drawable\\ic_copyright_black_24dp.xml"
     },
     {
         "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
         "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
     },
     {
-        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\logo3.png",
-        "source": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\src\\main\\res\\drawable\\logo3.png"
-    },
-    {
-        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
-        "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\drawable\\abc_btn_check_material.xml"
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_top_material.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_cab_background_top_material.xml"
     },
     {
         "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\logo.png",
         "source": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\src\\main\\res\\drawable\\logo.png"
-    },
-    {
-        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_snackbar_background.xml",
-        "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\82efef09e85fdd497f86d857808f048c7bf3e7f0\\output\\res\\drawable\\design_snackbar_background.xml"
     },
     {
         "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_top_material.xml",
@@ -316,8 +236,292 @@
         "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\drawable\\abc_ic_voice_search_api_material.xml"
     },
     {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_ab_back_material.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_ic_ab_back_material.xml"
+    },
+    {
+        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_borderless_material.xml",
+        "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\drawable\\abc_btn_borderless_material.xml"
+    },
+    {
+        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_menu_overflow_material.xml",
+        "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\drawable\\abc_ic_menu_overflow_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_track_material.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_seekbar_track_material.xml"
+    },
+    {
+        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
+        "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\drawable\\abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_indicator_material.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_ratingbar_indicator_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_voice_search_api_material.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_ic_voice_search_api_material.xml"
+    },
+    {
+        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_small_material.xml",
+        "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\drawable\\abc_ratingbar_small_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_snackbar_background.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\8534b746d633bb1e51d585b10798f16c181aeca4\\output\\res\\drawable\\design_snackbar_background.xml"
+    },
+    {
+        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
+        "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\drawable\\abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_fab_background.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\8534b746d633bb1e51d585b10798f16c181aeca4\\output\\res\\drawable\\design_fab_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_ab_back_material.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_ic_ab_back_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_icon_background.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\notification_icon_background.xml"
+    },
+    {
+        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml",
+        "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_thumb_material.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_seekbar_thumb_material.xml"
+    },
+    {
+        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_vector_test.xml",
+        "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\drawable\\abc_vector_test.xml"
+    },
+    {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_search_api_material.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_ic_search_api_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_material.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_ratingbar_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_snackbar_background.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\8534b746d633bb1e51d585b10798f16c181aeca4\\output\\res\\drawable\\design_snackbar_background.xml"
+    },
+    {
+        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_thumb_material.xml",
+        "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\drawable\\abc_seekbar_thumb_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\navigation_empty_icon.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\8534b746d633bb1e51d585b10798f16c181aeca4\\output\\res\\drawable\\navigation_empty_icon.xml"
+    },
+    {
+        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
+        "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\drawable\\abc_cab_background_internal_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_clear_material.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_ic_clear_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_text_cursor_material.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_text_cursor_material.xml"
+    },
+    {
+        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_bg_low.xml",
+        "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\drawable\\notification_bg_low.xml"
+    },
+    {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_material.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_btn_radio_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_search_api_material.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_ic_search_api_material.xml"
+    },
+    {
+        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\album.png",
+        "source": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\src\\main\\res\\drawable\\album.png"
+    },
+    {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_thumb_material.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_seekbar_thumb_material.xml"
+    },
+    {
+        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",
+        "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\drawable\\abc_list_selector_holo_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\boton_redondeado.xml",
+        "source": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\src\\main\\res\\drawable\\boton_redondeado.xml"
+    },
+    {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_icon_background.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\notification_icon_background.xml"
+    },
+    {
+        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
+        "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\drawable\\abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_switch_thumb_material.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_switch_thumb_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\boton_presionado.xml",
+        "source": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\src\\main\\res\\drawable\\boton_presionado.xml"
+    },
+    {
+        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_material.xml",
+        "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\drawable\\abc_ratingbar_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_tab_indicator_material.xml"
+    },
+    {
+        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\boton_presionado.xml",
+        "source": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\src\\main\\res\\drawable\\boton_presionado.xml"
+    },
+    {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_go_search_api_material.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_ic_go_search_api_material.xml"
+    },
+    {
+        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_material.xml",
+        "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\drawable\\abc_btn_radio_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_small_material.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_ratingbar_small_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_tile_bg.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\notification_tile_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\boton_presionado.xml",
+        "source": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\src\\main\\res\\drawable\\boton_presionado.xml"
+    },
+    {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_ab_back_material.xml",
+        "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\drawable\\abc_ic_ab_back_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
+        "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_track_material.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_seekbar_track_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_fab_background.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\8534b746d633bb1e51d585b10798f16c181aeca4\\output\\res\\drawable\\design_fab_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_tile_bg.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\notification_tile_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_small_material.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_ratingbar_small_material.xml"
+    },
+    {
+        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_go_search_api_material.xml",
+        "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\drawable\\abc_ic_go_search_api_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\logo.png",
+        "source": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\src\\main\\res\\drawable\\logo.png"
+    },
+    {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
+    },
+    {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_cab_background_internal_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\blank.png",
+        "source": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\src\\main\\res\\drawable\\blank.png"
+    },
+    {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\album.png",
+        "source": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\src\\main\\res\\drawable\\album.png"
+    },
+    {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
+    },
+    {
+        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_text_cursor_material.xml",
+        "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\drawable\\abc_text_cursor_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_menu_overflow_material.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_ic_menu_overflow_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_dialog_material_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\logo3.png",
+        "source": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\src\\main\\res\\drawable\\logo3.png"
+    },
+    {
+        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
+        "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\drawable\\abc_btn_check_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_cab_background_internal_bg.xml"
+    },
+    {
+        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_snackbar_background.xml",
+        "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\82efef09e85fdd497f86d857808f048c7bf3e7f0\\output\\res\\drawable\\design_snackbar_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_tab_indicator_material.xml"
+    },
+    {
         "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_search_material.xml",
         "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_textfield_search_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_list_selector_holo_light.xml"
     },
     {
         "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_vector_test.xml",
@@ -332,36 +536,28 @@
         "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\drawable\\abc_switch_thumb_material.xml"
     },
     {
-        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_borderless_material.xml",
-        "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\drawable\\abc_btn_borderless_material.xml"
-    },
-    {
         "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
         "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_spinner_textfield_background_material.xml"
     },
     {
-        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_menu_overflow_material.xml",
-        "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\drawable\\abc_ic_menu_overflow_material.xml"
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_dialog_material_background.xml"
     },
     {
-        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
-        "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\drawable\\abc_item_background_holo_dark.xml"
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_search_material.xml",
+        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_textfield_search_material.xml"
     },
     {
         "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_bg.xml",
         "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\notification_bg.xml"
     },
     {
+        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\logo2.png",
+        "source": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\src\\main\\res\\drawable\\logo2.png"
+    },
+    {
         "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_bg.xml",
         "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\drawable\\notification_bg.xml"
-    },
-    {
-        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_small_material.xml",
-        "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\drawable\\abc_ratingbar_small_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_voice_search_api_material.xml",
-        "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_ic_voice_search_api_material.xml"
     },
     {
         "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_tick_mark_material.xml",

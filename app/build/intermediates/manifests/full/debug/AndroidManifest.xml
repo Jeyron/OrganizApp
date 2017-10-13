@@ -9,6 +9,14 @@
         android:targetSdkVersion="26" />
 
     <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
 
     <meta-data
         android:name="android.support.VERSION"
@@ -33,6 +41,9 @@
             android:name="com.example.jeiro.organizapp.Opciones_menu"
             android:label="@string/title_activity_opciones_menu"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="com.example.jeiro.organizapp.capturar_foto" />
+        <activity android:name="com.example.jeiro.organizapp.capturar_video" />
+        <activity android:name="com.example.jeiro.organizapp.GalleryPreview" />
     </application>
 
 </manifest>

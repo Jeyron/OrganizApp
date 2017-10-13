@@ -486,6 +486,12 @@
             <enum name="screen" value="15"/>
         </attr></declare-styleable>
     <declare-styleable name="ViewStubCompat"><attr name="android:layout"/><attr name="android:inflatedId"/><attr name="android:id"/></declare-styleable>
+    <declare-styleable name="ZoomageView"><attr format="boolean" name="zoomage_zoomable"/><attr format="boolean" name="zoomage_translatable"/><attr format="boolean" name="zoomage_restrictBounds"/><attr format="boolean" name="zoomage_animateOnReset"/><attr format="boolean" name="zoomage_autoCenter"/><attr format="float" name="zoomage_minScale"/><attr format="float" name="zoomage_maxScale"/><attr format="enum" name="zoomage_autoResetMode">
+            <enum name="UNDER" value="0"/>
+            <enum name="OVER" value="1"/>
+            <enum name="ALWAYS" value="2"/>
+            <enum name="NEVER" value="3"/>
+        </attr></declare-styleable>
     <dimen name="abc_action_bar_content_inset_material">16dp</dimen>
     <dimen name="abc_action_bar_content_inset_with_nav">72dp</dimen>
     <dimen name="abc_action_bar_default_height_material">56dp</dimen>
@@ -697,11 +703,18 @@
     <string name="app_name">OrganizApp</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
-    <string name="btn_Renombrar_album"> Renombrar álbum </string>
-    <string name="btn_agregar_album"> AGREGAR </string>
+    <string name="btnEditar"> Editar </string>
+    <string name="btnEliminar"> Eliminar </string>
+    <string name="btn_Renombrar"> RENOMBRAR </string>
+    <string name="btn_agregar"> AGREGAR </string>
+    <string name="btn_iniciar_sesion"> Iniciar Sesión </string>
+    <string name="btn_registrar_usuario"> Aceptar </string>
+    <string name="btn_registrarse"> Registrarse </string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
+    <string name="confirmar_contra"> Confirma contraseña </string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="nuevo_album"> Nuevo álbum </string>
+    <string name="lbl_nuevo_album"> Nuevo álbum </string>
+    <string name="lbl_renombrar_album"> Renombrar álbum </string>
     <string name="password_toggle_content_description">Toggle password visibility</string>
     <string name="path_password_eye" translatable="false">M12,4.5C7,4.5 2.73,7.61 1,12c1.73,4.39 6,7.5 11,7.5s9.27,-3.11 11,-7.5c-1.73,-4.39 -6,-7.5 -11,-7.5zM12,17c-2.76,0 -5,-2.24 -5,-5s2.24,-5 5,-5 5,2.24 5,5 -2.24,5 -5,5zM12,9c-1.66,0 -3,1.34 -3,3s1.34,3 3,3 3,-1.34 3,-3 -1.34,-3 -3,-3z</string>
     <string name="path_password_eye_mask_strike_through" translatable="false">M2,4.27 L19.73,22 L22.27,19.46 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
@@ -711,6 +724,33 @@
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="title_activity_opciones_menu">Opciones_menu</string>
+    <string name="toast_carpeta_creada"> Carpeta base creada </string>
+    <string name="toast_contraseña_incorrecta"> Error, contraseña incorrecta </string>
+    <string name="toast_error"> Error </string>
+    <string name="toast_error_contra_diferentes"> Error, contraseñas diferentes </string>
+    <string name="toast_espacio_vacio">  Error, algún espacio vacío </string>
+    <string name="toast_name_dialog"> Input Name to dialog: </string>
+    <string name="toast_no_encontrado"> Error, No se ha encontrado el usuario </string>
+    <string name="toast_no_existe"> Error, el álbum no existe </string>
+    <string name="toast_no_posible_eliminar_album"> Error, no ha sido posible eliminar el álbum </string>
+    <string name="toast_no_se_creo_album"> Error, no ha sido posible crear el álbum </string>
+    <string name="toast_no_se_guardan"> Error, no ha sido posible guardar los datos </string>
+    <string name="toast_nombre_album_vacio"> Error, nombre del nuevo álbum vacío </string>
+    <string name="toast_nombre_uso"> Error, nuevo nombre en uso </string>
+    <string name="toast_nuevo_nombre_vacio"> Error, el nuevo nombre está vacío </string>
+    <string name="toast_se_creo_album"> Éxito, se ha creado un álbum </string>
+    <string name="toast_se_elimino_album"> Éxito, se ha eliminado álbum </string>
+    <string name="toast_se_registro"> Éxito, datos de usuario guardados </string>
+    <string name="toast_ya_existe_album"> Error, el álbum ya existe </string>
+    <string name="txt_album"> Álbum </string>
+    <string name="txt_contraseña_login"> Contraseña </string>
+    <string name="txt_derechos"> Todos los derechos reservados </string>
+    <string name="txt_fotos"> Fotos </string>
+    <string name="txt_nombre_app"> OrganizApp </string>
+    <string name="txt_nombre_completo"> Nombre completo </string>
+    <string name="txt_nombre_registro"> Registrarse </string>
+    <string name="txt_nombre_usuario"> Nombre de usuario </string>
+    <string name="txt_nombre_usuario_login"> Nombre de usuario </string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>

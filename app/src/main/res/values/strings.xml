@@ -8,6 +8,16 @@
     <string name="btn_Renombrar"> RENOMBRAR </string>
     <string name="btn_agregar"> AGREGAR </string>
 
+    <string name="txt_album"> Álbum </string>
+    <string name="txt_fotos"> Fotos </string>
+
+    <string name="toast_guardo_foto"> Éxito, la foto se guardó:  </string>
+    <string name="toast_no_guardo_foto"> Error, no ha sido posible agregar la foto </string>
+
+    <string name="toast_guardo_video"> Éxito, el video se guardó:  </string>
+    <string name="toast_no_guardo_video"> Error, no ha sido posible agregar el video </string>
+
+
 
     <!-- TODO: Se crea el diccionario en español -->
     <string name="btn_registrarse"> Registrarse </string>

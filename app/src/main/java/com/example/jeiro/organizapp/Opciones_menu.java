@@ -107,9 +107,9 @@ public class Opciones_menu extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "Albumes";
+                    return getResources().getString(R.string.txt_album);
                 case 1:
-                    return "Fotos";
+                    return getResources().getString(R.string.txt_fotos);
             }
             return null;
         }

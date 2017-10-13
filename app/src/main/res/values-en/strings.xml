@@ -9,7 +9,14 @@
     <string name="lbl_renombrar_album"> Rename album </string>
     <string name="btn_Renombrar"> Rename </string>
     <string name="btn_agregar"> Add </string>
+    <string name="txt_album"> Album </string>
+    <string name="txt_fotos"> Picture </string>
 
+    <string name="toast_guardo_foto"> Success, the photo was saved:  </string>
+    <string name="toast_no_guardo_foto"> Error, could not add photo </string>
+
+    <string name="toast_guardo_video"> Success, the video was saved:   </string>
+    <string name="toast_no_guardo_video"> Error, could not add video </string>
 
     <!-- TODO: Se crea el diccionario en español -->
     <string name="btn_registrarse"> Check in </string>
