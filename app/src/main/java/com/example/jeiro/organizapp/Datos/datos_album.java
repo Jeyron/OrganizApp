@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import com.example.jeiro.organizapp.BD.*;
+import com.example.jeiro.organizapp.MainActivity;
 import com.example.jeiro.organizapp.Modelo.*;
 
 import java.io.File;
@@ -18,6 +19,13 @@ public class datos_album
 {
     public datos_album() {}
 
+    /**
+     * Agrega a base de datos todos los albumes
+     * @param album
+     * @param insertar
+     * @param context
+     * @return
+     */
     public boolean insertar_album(Album album, boolean insertar, Context context)
     {
         base_de_datos helper = new base_de_datos(context);
@@ -48,6 +56,11 @@ public class datos_album
         return true;
     }
 
+    /**
+     * Busca todos los albumes creados en el sistema
+     * @param context
+     * @return
+     */
     public ArrayList<Album> obtener_albums (Context context)
     {
         ArrayList datos = new ArrayList<Album>();
@@ -81,18 +94,32 @@ public class datos_album
         return datos;
     }
 
-    public Album obtener_album (Context context, Album album)
+    /**
+     * busca un album especifico en el sistema
+     * @param context
+     * @param album
+     * @return
+     */
+    public Album obtener_album (Context context, String album)
     {
         ArrayList<Album> datos = obtener_albums(context);
+        if(album.equals(""))
+            return new Album("","", MainActivity.usuario_activo.getUsuario());
         for (int i = 0; i < datos.size();i++)
         {
             Album temp = datos.get(i);
-            if(temp.getNombre().equals(album.getNombre()))
+            if(temp.getNombre().toLowerCase().equals(album.toLowerCase()))
                 return temp;
         }
         return null;
     }
 
+    /**
+     * Busca todos los albums que se hayen dentro otro album
+     * @param context
+     * @param album
+     * @return
+     */
     public ArrayList<Album> obtener_albums_por_album(Context context, Album album)
     {
         ArrayList<Album> datos = obtener_albums(context);
@@ -106,6 +133,12 @@ public class datos_album
         return resultado;
     }
 
+    /**
+     * Busca la ruta en la que se encuetra hubicado el album
+     * @param context
+     * @param album
+     * @return
+     */
     public String obtener_album_path (Context context, Album album) {
         ArrayList<Album> datos = obtener_albums(context);
         /*
@@ -120,11 +153,13 @@ public class datos_album
         if (datos.size() != 0)
         {
             int i = 0;
-            while (album.getPadre().equals("") && datos.size() < i) {
+            while (!album.getPadre().equals("") && datos.size() > i) {
+
                 if (datos.get(i).getNombre().equals(album.getPadre())) {
                     album = datos.get(i);
+                    path = (datos.get(i).getPadre().equals(""))?path:File.separator + datos.get(i).getPadre() + path;
+
                     i = 0;
-                    path += File.separator + album.getPadre();
                 }
                 else
                     i++;
@@ -133,6 +168,12 @@ public class datos_album
         return path;
     }
 
+    /**
+     * Elimina un album del sistema
+     * @param album
+     * @param context
+     * @return
+     */
     public boolean eliminar_album (Album album, Context context)
     {
         ArrayList<Album> datos = obtener_albums_por_album(context,album);
@@ -166,6 +207,13 @@ public class datos_album
         return true;
     }
 
+    /**
+     * cambia el nombre de un album en el sistema
+     * @param nuevo
+     * @param anterior
+     * @param context
+     * @return
+     */
     public boolean rename_album (Album nuevo, Album anterior, Context context) {
         try
         {

@@ -37,8 +37,6 @@ public class Function {
     static final int    ID_IMAGE  = 1;
     static final int    ID_VIDEO  = 2;
     static final int    ID_ALBUM  = 3;
-    static final String FRAGMENT_ALBUM = "album";
-    static final String FRAGMENT_IMAGE = "imagen";
 
     public static  boolean hasPermissions(Context context, String... permissions) {
         if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && context != null && permissions != null) {
@@ -106,30 +104,36 @@ public class Function {
         else return false;
     }
 
+    public static boolean importar_contenido (String path, String nuevo_path, String name)
+    {
+        File oldfolder = new File(path);
+        File newfolder = new File(nuevo_path,name);
+        oldfolder.renameTo(newfolder);
+        return true;
+    }
+
+    public static boolean mover_contenido (String path, String nuevo_path, String name)
+    {
+        File oldfolder = new File(path,name);
+        File newfolder = new File(nuevo_path,name);
+        oldfolder.renameTo(newfolder);
+        return true;
+    }
+
     public static boolean rename_album (String path, String ex_name, String name)
     {
         File oldfolder = new File(path,ex_name);
         File newfolder = new File(path,name);
-        try
-        {
-            oldfolder.renameTo(newfolder);
-            return true;
-        }
-        catch (Exception e) {
-            return false;
-        }
+        oldfolder.renameTo(newfolder);
+        return true;
+
     }
 
-    public static boolean delete_album (String path, String name)
+    public static boolean borrar_directorio(String path, String name)
     {
         File directorio = new File(path, name);
-        if (directorio.exists())
-        {
-            delete_album_Recursive(directorio);
-            return true;
-        }
-
-        else return false;
+        delete_album_Recursive(directorio);
+        return true;
     }
 
     private static void delete_album_Recursive(File fileOrDirectory) {

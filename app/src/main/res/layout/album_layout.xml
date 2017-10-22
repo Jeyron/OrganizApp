@@ -52,7 +52,7 @@
                     android:shadowRadius="7.0"
                     android:text="This is some"
                     android:textColor="#ffffff"
-                    android:textSize="12sp"
+                    android:textSize="16sp"
                     android:maxLines="1"
                     android:scrollHorizontally="true"
                     android:ellipsize="end"/>

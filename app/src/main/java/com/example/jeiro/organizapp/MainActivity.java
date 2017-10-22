@@ -29,7 +29,6 @@ public class MainActivity extends AppCompatActivity
     public static Usuario usuario_activo;
     public static String root_usuario;
     public static String padre = "";
-    public static String string_temporal;
     public static String tipoFragment;
 
     @Override
@@ -40,7 +39,7 @@ public class MainActivity extends AppCompatActivity
         ActionBar actionBar = getSupportActionBar();  // se elimina la barra del activity para que se vea mejor la interfaz
         actionBar.hide();
 
-        String[] PERMISSIONS = {Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.CAMERA};
+        String[] PERMISSIONS = {Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.CAMERA, Manifest.permission.ACCESS_NETWORK_STATE, Manifest.permission.INTERNET};
         if(!Function.hasPermissions(this, PERMISSIONS)){
             ActivityCompat.requestPermissions(this, PERMISSIONS, REQUEST_PERMISSION_KEY);
         }
@@ -54,6 +53,11 @@ public class MainActivity extends AppCompatActivity
             Toast.makeText(this,getResources().getString(R.string.toast_carpeta_creada), Toast.LENGTH_SHORT).show();
         }
         root = carpetaContenedora.getAbsolutePath().toString();
+
+        datos_usuario datos = new datos_usuario();
+
+        if(datos.obtener_usuarios(this).size() == 0)
+            ((Button)findViewById(R.id.btn_registrarse)).setEnabled(false);
     }
 
 

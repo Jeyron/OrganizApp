@@ -703,8 +703,10 @@
     <string name="app_name">OrganizApp</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
+    <string name="btnCompartir"> Compartir </string>
     <string name="btnEditar"> Editar </string>
     <string name="btnEliminar"> Eliminar </string>
+    <string name="btnMover"> Mover </string>
     <string name="btn_Renombrar"> RENOMBRAR </string>
     <string name="btn_agregar"> AGREGAR </string>
     <string name="btn_iniciar_sesion"> Iniciar Sesión </string>
@@ -729,12 +731,19 @@
     <string name="toast_error"> Error </string>
     <string name="toast_error_contra_diferentes"> Error, contraseñas diferentes </string>
     <string name="toast_espacio_vacio">  Error, algún espacio vacío </string>
+    <string name="toast_guardo_foto"> Éxito, la foto se guardó:  </string>
+    <string name="toast_guardo_video"> Éxito, el video se guardó:  </string>
+    <string name="toast_mover_ya_exite"> Error, el arhivo a mover ya exite </string>
+    <string name="toast_movio_arhivo"> Éxito, se movio al archivo </string>
     <string name="toast_name_dialog"> Input Name to dialog: </string>
     <string name="toast_no_encontrado"> Error, No se ha encontrado el usuario </string>
     <string name="toast_no_existe"> Error, el álbum no existe </string>
+    <string name="toast_no_guardo_foto"> Error, no ha sido posible agregar la foto </string>
+    <string name="toast_no_guardo_video"> Error, no ha sido posible agregar el video </string>
     <string name="toast_no_posible_eliminar_album"> Error, no ha sido posible eliminar el álbum </string>
     <string name="toast_no_se_creo_album"> Error, no ha sido posible crear el álbum </string>
     <string name="toast_no_se_guardan"> Error, no ha sido posible guardar los datos </string>
+    <string name="toast_no_se_puede_mover"> Error, no se pudo mover el achivo </string>
     <string name="toast_nombre_album_vacio"> Error, nombre del nuevo álbum vacío </string>
     <string name="toast_nombre_uso"> Error, nuevo nombre en uso </string>
     <string name="toast_nuevo_nombre_vacio"> Error, el nuevo nombre está vacío </string>
@@ -743,6 +752,7 @@
     <string name="toast_se_registro"> Éxito, datos de usuario guardados </string>
     <string name="toast_ya_existe_album"> Error, el álbum ya existe </string>
     <string name="txt_album"> Álbum </string>
+    <string name="txt_archivo"> Archvos </string>
     <string name="txt_contraseña_login"> Contraseña </string>
     <string name="txt_derechos"> Todos los derechos reservados </string>
     <string name="txt_fotos"> Fotos </string>
@@ -751,6 +761,8 @@
     <string name="txt_nombre_registro"> Registrarse </string>
     <string name="txt_nombre_usuario"> Nombre de usuario </string>
     <string name="txt_nombre_usuario_login"> Nombre de usuario </string>
+    <string name="txt_opciones_contenido"> Opciones contenido  </string>
+    <string name="txt_vacio"> No hay contenido  </string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>

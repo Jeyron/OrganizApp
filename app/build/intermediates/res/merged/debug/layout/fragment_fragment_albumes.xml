@@ -34,20 +34,27 @@
         android:layout_margin="5dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/ic_menu_add" />
+        app:srcCompat="@mipmap/ic_album" />
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/add_photo"
             android:layout_margin="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@android:drawable/ic_menu_camera" />
+            app:srcCompat="@mipmap/ic_camara" />
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/add_video"
             android:layout_margin="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@android:drawable/presence_video_away" />
+            app:srcCompat="@mipmap/ic_video_t" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/add_external"
+            android:layout_margin="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@mipmap/ic_importar" />
     </LinearLayout>
 </android.support.design.widget.CoordinatorLayout>

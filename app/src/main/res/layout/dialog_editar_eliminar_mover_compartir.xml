@@ -12,56 +12,49 @@
         android:background="@color/colorFondo"
         android:padding="10dp"
         android:gravity="center"
-        android:textSize="20dp"/>
-
-    <EditText
-        android:id="@+id/txtName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="text"
-        android:imeOptions="actionDone"
-        android:layout_marginTop="5dp"/>
+        android:textSize="20dp"
+        android:text="@string/txt_opciones_contenido"/>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_eliminar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:background="#FFFFBB33"
         android:textColor="#fff"
         android:textStyle="bold"
-        android:text="Renombrar" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:background="#FFFFBB33"
-        android:textColor="#fff"
-        android:textStyle="bold"
-        android:text="Eliminar"
+        android:text="@string/btnEliminar"
         />
 
-    <Button
-        android:id="@+id/button3"
+    <Spinner
+        android:id="@+id/spn_albumes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:background="#FFFFBB33"
-        android:textColor="#fff"
+        android:background="#fff"
+        android:gravity="center"
         android:textStyle="bold"
-        android:text="Mover" />
+        android:spinnerMode="dialog" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btn_mover"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:background="#FFFFBB33"
         android:textColor="#fff"
         android:textStyle="bold"
-        android:text="Compartir" />
+        android:text="@string/btnMover" />
+
+    <Button
+        android:id="@+id/btn_compartir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#FFFFBB33"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:text="@string/btnCompartir" />
 
 
 </LinearLayout>

@@ -20,8 +20,28 @@
         "source": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\src\\main\\res\\mipmap-xxxhdpi\\logo.png"
     },
     {
+        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi\\ic_album.png",
+        "source": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_album.png"
+    },
+    {
+        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi\\ic_video.png",
+        "source": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_video.png"
+    },
+    {
         "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi\\ic_launcher_round.png",
         "source": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi\\ic_camara.png",
+        "source": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_camara.png"
+    },
+    {
+        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi\\ic_importar.png",
+        "source": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_importar.png"
+    },
+    {
+        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi\\ic_video_t.png",
+        "source": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_video_t.png"
     },
     {
         "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi\\ic_launcher.png",

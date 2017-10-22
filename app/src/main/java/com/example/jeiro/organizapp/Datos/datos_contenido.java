@@ -17,6 +17,13 @@ public class datos_contenido
 {
     public datos_contenido() {}
 
+    /**
+     * Agrega contenido multimedia al sistema (fotos y video)
+     * @param contenido
+     * @param insertar
+     * @param context
+     * @return
+     */
     public boolean insertar_contenido(Contenido contenido, boolean insertar, Context context)
     {
         base_de_datos helper = new base_de_datos(context);
@@ -48,6 +55,11 @@ public class datos_contenido
         return true;
     }
 
+    /**
+     * Busca todos los contenidos del sistema
+     * @param context
+     * @return
+     */
     public ArrayList<Contenido> obtener_contenidos (Context context)
     {
         ArrayList<Contenido> datos = new ArrayList();
@@ -81,6 +93,30 @@ public class datos_contenido
         return datos;
     }
 
+    /**
+     * Busca un contenido especifico del sistema
+     * @param context
+     * @param nombre
+     * @return
+     */
+    public Contenido obtener_contenido(Context context, String nombre)
+    {
+        ArrayList<Contenido> datos = obtener_contenidos(context);
+        for (int i = 0; i < datos.size();i++)
+        {
+            Contenido temp = datos.get(i);
+            if(temp.getNombre().equals(nombre))
+                return temp;
+        }
+        return null;
+    }
+
+    /**
+     * Busca todos los contenidos de un album
+     * @param context
+     * @param album
+     * @return
+     */
     public ArrayList<Contenido> obtener_contenido_por_album (Context context, Album album)
     {
         ArrayList<Contenido> datos = obtener_contenidos(context);
@@ -94,6 +130,12 @@ public class datos_contenido
         return resultado;
     }
 
+    /**
+     * Elimina contenido del sistema
+     * @param contenido
+     * @param context
+     * @return
+     */
     public boolean eliminar_contenido (Contenido contenido, Context context)
     {
         base_de_datos helper = new base_de_datos(context);

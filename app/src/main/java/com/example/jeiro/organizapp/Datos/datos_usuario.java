@@ -17,6 +17,13 @@ public class datos_usuario
 {
     public datos_usuario() {}
 
+    /**
+     * Agrega usuarios al sistema
+     * @param usuario
+     * @param insertar
+     * @param context
+     * @return
+     */
     public boolean insertar_usuario(Usuario usuario, boolean insertar, Context context)
     {
         base_de_datos helper = new base_de_datos(context);
@@ -47,6 +54,11 @@ public class datos_usuario
         return true;
     }
 
+    /**
+     * Busca todos los usuarios del sistema
+     * @param context
+     * @return
+     */
     public ArrayList<Usuario> obtener_usuarios (Context context)
     {
         ArrayList<Usuario> datos = new ArrayList();
@@ -80,6 +92,12 @@ public class datos_usuario
         return datos;
     }
 
+    /**
+     * Busca un usuario en el sistema
+     * @param context
+     * @param usuario
+     * @return
+     */
     public Usuario obtener_usuarios (Context context, Usuario usuario)
     {
         ArrayList<Usuario> datos = new ArrayList();
@@ -119,6 +137,12 @@ public class datos_usuario
         return null;
     }
 
+    /**
+     * Elimina usuarios del sistema
+     * @param usuario
+     * @param context
+     * @return
+     */
     public boolean eliminar_usuario (Usuario usuario, Context context)
     {
         base_de_datos helper = new base_de_datos(context);

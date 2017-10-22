@@ -432,6 +432,10 @@
         "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\drawable\\abc_item_background_holo_light.xml"
     },
     {
+        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\album.jpg",
+        "source": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\src\\main\\res\\drawable\\album.jpg"
+    },
+    {
         "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
         "source": "C:\\Users\\rcrodriguez\\.android\\build-cache\\b6620a6788f2922f1668df8153a441bc5b89af05\\output\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
     },

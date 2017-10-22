@@ -18,6 +18,9 @@
     <string name="toast_guardo_video"> Success, the video was saved:   </string>
     <string name="toast_no_guardo_video"> Error, could not add video </string>
 
+    <string name="txt_vacio"> No content  </string>
+    <string name="txt_opciones_contenido"> Options content  </string>
+
     <!-- TODO: Se crea el diccionario en español -->
     <string name="btn_registrarse"> Check in </string>
     <string name="txt_nombre_usuario_login"> Username </string>
@@ -34,6 +37,8 @@
 
     <string name="btnEditar"> Edit </string>
     <string name="btnEliminar"> Remove </string>
+    <string name="btnMover"> Move </string>
+    <string name="btnCompartir"> Share </string>
 
     <string name="toast_carpeta_creada"> Base folder created </string>
     <string name="toast_espacio_vacio">  Error, some empty space </string>
@@ -43,7 +48,7 @@
     <string name="toast_no_se_guardan"> Error, could not save data </string>
     <string name="toast_error"> Error </string>
     <string name="toast_error_contra_diferentes"> Error, different passwords </string>
-
+    <string name="txt_archivo"> Files </string>
 
     <string name="toast_nombre_album_vacio"> Error, empty new album name </string>
     <string name="toast_name_dialog"> Input Name to dialog: </string>

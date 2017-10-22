@@ -12,6 +12,10 @@
         "source": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\src\\main\\res\\mipmap-mdpi\\logo.png"
     },
     {
+        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi\\ic_video.png",
+        "source": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\src\\main\\res\\mipmap-mdpi\\ic_video.png"
+    },
+    {
         "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi\\ic_launcher_round.png",
         "source": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
     },
@@ -20,8 +24,20 @@
         "source": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\src\\main\\res\\mipmap-mdpi\\logo.png"
     },
     {
+        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi\\ic_camara.png",
+        "source": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\src\\main\\res\\mipmap-mdpi\\ic_camara.png"
+    },
+    {
+        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi\\ic_video_t.png",
+        "source": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\src\\main\\res\\mipmap-mdpi\\ic_video_t.png"
+    },
+    {
         "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi\\ic_launcher_round.png",
         "source": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi\\ic_importar.png",
+        "source": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\src\\main\\res\\mipmap-mdpi\\ic_importar.png"
     },
     {
         "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi\\ic_launcher_round.png",
@@ -30,5 +46,9 @@
     {
         "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi\\ic_launcher.png",
         "source": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi\\ic_album.png",
+        "source": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\src\\main\\res\\mipmap-mdpi\\ic_album.png"
     }
 ]

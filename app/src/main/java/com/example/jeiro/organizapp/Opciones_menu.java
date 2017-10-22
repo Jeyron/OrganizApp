@@ -64,7 +64,7 @@ public class Opciones_menu extends AppCompatActivity {
             finish();
         else {
             datos_album datos = new datos_album();
-            Album a = datos.obtener_album(this, new Album("", MainActivity.padre, ""));
+            Album a = datos.obtener_album(this, MainActivity.padre);
             MainActivity.padre = a.getPadre();
             if(MainActivity.padre.equals(""))
                 setTitle(MainActivity.usuario_activo.getUsuario());

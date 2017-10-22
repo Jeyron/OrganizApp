@@ -10,6 +10,7 @@
 
     <string name="txt_album"> Álbum </string>
     <string name="txt_fotos"> Fotos </string>
+    <string name="txt_archivo"> Archvos </string>
 
     <string name="toast_guardo_foto"> Éxito, la foto se guardó:  </string>
     <string name="toast_no_guardo_foto"> Error, no ha sido posible agregar la foto </string>
@@ -17,6 +18,8 @@
     <string name="toast_guardo_video"> Éxito, el video se guardó:  </string>
     <string name="toast_no_guardo_video"> Error, no ha sido posible agregar el video </string>
 
+    <string name="txt_vacio"> No hay contenido  </string>
+    <string name="txt_opciones_contenido"> Opciones contenido  </string>
 
 
     <!-- TODO: Se crea el diccionario en español -->
@@ -35,6 +38,8 @@
 
     <string name="btnEditar"> Editar </string>
     <string name="btnEliminar"> Eliminar </string>
+    <string name="btnMover"> Mover </string>
+    <string name="btnCompartir"> Compartir </string>
 
     <string name="toast_carpeta_creada"> Carpeta base creada </string>
     <string name="toast_espacio_vacio">  Error, algún espacio vacío </string>
@@ -55,13 +60,21 @@
     <string name="toast_no_se_creo_album"> Error, no ha sido posible crear el álbum </string>
     <string name="toast_nuevo_nombre_vacio"> Error, el nuevo nombre está vacío </string>
 
+
+    <string name="toast_movio_arhivo"> Éxito, se movio al archivo </string>
+    <string name="toast_no_se_puede_mover"> Error, no se pudo mover el achivo </string>
+    <string name="toast_mover_ya_exite"> Error, el arhivo a mover ya exite </string>
+
+
+
+
+
+
     <string name="toast_nombre_uso"> Error, nuevo nombre en uso </string>
 
     <string name="toast_se_elimino_album"> Éxito, se ha eliminado álbum </string>
     <string name="toast_no_posible_eliminar_album"> Error, no ha sido posible eliminar el álbum </string>
     <string name="toast_no_existe"> Error, el álbum no existe </string>
-
-
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

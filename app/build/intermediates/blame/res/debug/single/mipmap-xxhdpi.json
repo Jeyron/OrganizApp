@@ -1,5 +1,9 @@
 [
     {
+        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_video_t.png",
+        "source": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_video_t.png"
+    },
+    {
         "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher_round.png",
         "source": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
     },
@@ -22,6 +26,22 @@
     {
         "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher.png",
         "source": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_importar.png",
+        "source": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_importar.png"
+    },
+    {
+        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_video.png",
+        "source": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_video.png"
+    },
+    {
+        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_camara.png",
+        "source": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_camara.png"
+    },
+    {
+        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_album.png",
+        "source": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_album.png"
     },
     {
         "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher_round.png",

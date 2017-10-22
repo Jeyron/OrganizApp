@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.jeiro.organizapp.Datos.datos_album;
 import com.example.jeiro.organizapp.Datos.datos_contenido;
@@ -42,7 +43,7 @@ public class Fragment_capturas extends Fragment {
             v = inflater.inflate(R.layout.fragment_vacio, container, false);
 
             TextView textView = (TextView) v.findViewById(R.id.label);
-            textView.setText("No hay contenido");
+            textView.setText(getResources().getString(R.string.txt_vacio));
 
         }
         else
@@ -126,7 +127,14 @@ public class Fragment_capturas extends Fragment {
                     intent.putExtra("path", albumList.get(+position).get(Function.KEY_PATH));
                     startActivity(intent);
                 }
-                //Toast.makeText(getActivity(),"view_id " + view.getId() + " - " + id , Toast.LENGTH_SHORT).show();
+                else
+                {
+                    Intent intent = new Intent(getActivity(), VideoPreview.class);
+                    intent.putExtra("path", albumList.get(+position).get(Function.KEY_PATH));
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(intent);
+                }
+                Toast.makeText(getActivity(),albumList.get(+position).get(Function.KEY_PATH), Toast.LENGTH_SHORT).show();
             }
         });
     }

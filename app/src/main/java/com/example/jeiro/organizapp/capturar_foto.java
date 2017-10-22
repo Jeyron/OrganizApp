@@ -49,13 +49,7 @@ public class capturar_foto extends AppCompatActivity {
         String timeStamp = new SimpleDateFormat("ddMMyyyy_HHmmss").format(date.getTime());
         datos_album datos = new datos_album();
         name = "IMG_" + timeStamp + ".png";
-        mediaFile = new File(MainActivity.root_usuario + File.separator + datos.obtener_album_path(this,new Album(MainActivity.padre, MainActivity.string_temporal,MainActivity.usuario_activo.getUsuario())) + File.separator + name);
-    }
-
-    @Override
-    public void onBackPressed()
-    {
-        finish();
+        mediaFile = new File(MainActivity.root_usuario + datos.obtener_album_path(this,new Album(MainActivity.padre, MainActivity.padre,MainActivity.usuario_activo.getUsuario())) + File.separator + name);
     }
 
     @Override
@@ -63,11 +57,14 @@ public class capturar_foto extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         try
         {
-            mediaFile.createNewFile();
-            datos_contenido content = new datos_contenido();
-            Contenido imagen = new Contenido(MainActivity.padre, Function.PHOTO_TYPE, name, MainActivity.usuario_activo.getUsuario());
-            content.insertar_contenido(imagen, true, this);
-            Toast.makeText(this,getResources().getString(R.string.toast_guardo_foto) + mediaFile.getPath(), Toast.LENGTH_SHORT).show();
+            if(resultCode == RESULT_OK)
+            {
+                mediaFile.createNewFile();
+                datos_contenido content = new datos_contenido();
+                Contenido imagen = new Contenido(MainActivity.padre, Function.PHOTO_TYPE, name, MainActivity.usuario_activo.getUsuario());
+                content.insertar_contenido(imagen, true, this);
+                Toast.makeText(this, getResources().getString(R.string.toast_guardo_foto) + mediaFile.getPath(), Toast.LENGTH_SHORT).show();
+            }
         } catch (IOException e)
         {
             Toast.makeText(this,getResources().getString(R.string.toast_no_guardo_foto), Toast.LENGTH_SHORT).show();
