@@ -424,6 +424,10 @@
         "source": "C:\\Users\\jeiro\\.android\\build-cache\\09ecc3a49be1ecbd3052979bc2e319c425407fb7\\output\\res\\layout\\notification_template_part_chronometer.xml"
     },
     {
+        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_gallery_preview_photo.xml",
+        "source": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\src\\main\\res\\layout\\activity_gallery_preview_photo.xml"
+    },
+    {
         "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_registrarse.xml",
         "source": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\src\\main\\res\\layout\\activity_registrarse.xml"
     },
@@ -466,10 +470,6 @@
     {
         "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_fragment_albumes.xml",
         "source": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\src\\main\\res\\layout\\fragment_fragment_albumes.xml"
-    },
-    {
-        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_gallery_preview.xml",
-        "source": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\src\\main\\res\\layout\\activity_gallery_preview.xml"
     },
     {
         "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu.xml",
@@ -754,6 +754,10 @@
     {
         "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_bottom_navigation_item.xml",
         "source": "C:\\Users\\jeiro\\.android\\build-cache\\8534b746d633bb1e51d585b10798f16c181aeca4\\output\\res\\layout\\design_bottom_navigation_item.xml"
+    },
+    {
+        "merged": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_gallery_preview_video.xml",
+        "source": "R:\\Documents\\ProjectsAS\\OrganizApp\\app\\src\\main\\res\\layout\\activity_gallery_preview_video.xml"
     },
     {
         "merged": "C:\\Users\\jeiro\\AndroidStudioProjects\\organizApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_select_dialog_material.xml",

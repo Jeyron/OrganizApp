@@ -60,12 +60,20 @@ public class Opciones_menu extends AppCompatActivity {
     @Override
     public void onBackPressed()
     {
-        if(MainActivity.padre.equals(""))
+        if(MainActivity.padre.equals("") && !MainActivity.usado_por_fragment)
             finish();
-        else {
+        else
+        {
             datos_album datos = new datos_album();
             Album a = datos.obtener_album(this, MainActivity.padre);
-            MainActivity.padre = a.getPadre();
+            if(MainActivity.usado_por_fragment)
+            {
+                MainActivity.usado_por_fragment = false;
+            }
+            else
+            {
+                MainActivity.padre = a.getPadre();
+            }
             if(MainActivity.padre.equals(""))
                 setTitle(MainActivity.usuario_activo.getUsuario());
             set_view_adapter();

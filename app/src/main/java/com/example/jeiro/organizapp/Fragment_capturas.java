@@ -2,6 +2,7 @@ package com.example.jeiro.organizapp;
 
 import android.content.Intent;
 import android.content.res.Resources;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -27,6 +28,7 @@ public class Fragment_capturas extends Fragment {
 
     private static Fragment_capturas instance = null;
     GridView galleryGridView;
+    LoadImages loadTask;
     public Fragment_capturas() {
         // Required empty public constructor
     }
@@ -62,8 +64,8 @@ public class Fragment_capturas extends Fragment {
                 float px = Function.convertDpToPixel(dp, getActivity().getApplicationContext());
                 galleryGridView.setColumnWidth(Math.round(px));
             }
-            cargar_grid_view();
-            set_adapter();
+            loadTask = new LoadImages();
+            loadTask.execute();
         }
         return v;
     }
@@ -80,63 +82,72 @@ public class Fragment_capturas extends Fragment {
     }
 
     ArrayList<HashMap<String, String>> albumList = new ArrayList<HashMap<String, String>>();
-
-    public void cargar_grid_view()
-    {
-        albumList.clear();
-        //Toast.makeText(getActivity(),"Entra", Toast.LENGTH_SHORT).show();
-        //sleep();
-        datos_album d_album              = new datos_album();
-        datos_contenido d_contenido      = new datos_contenido();
-        ArrayList<Contenido> l_contenido = d_contenido.obtener_contenidos(getActivity());
-
-        //*
-        String path = null; // Imagen path
-        String name = null;
-        String countPhoto = null;
-        String tipo = null;
-        String tipo_contenido = null;
-
-        // contenido
-        for(int i = 0; i < l_contenido.size(); i++)
-        {
-            Contenido temp = l_contenido.get(i);
-            name = temp.getNombre();
-            path = MainActivity.root_usuario + d_album.obtener_album_path(getActivity(),new Album(temp.getPadre(),"",MainActivity.usuario_activo.getUsuario()))+ File.separator + temp.getNombre();
-            tipo = Function.CONTENIDO;
-            countPhoto = "";
-            tipo_contenido = temp.getTipo();
-            albumList.add(Function.mappingInbox(name, path, countPhoto, tipo, tipo_contenido));
+    ArrayList<String> pathList = new ArrayList<>();
+    ArrayList<String> typeList = new ArrayList<>();
+    class LoadImages extends AsyncTask<String, Void, String> {
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            albumList.clear();
+            pathList.clear();
+            typeList.clear();
         }
-        //*/
-    }
 
-    private void set_adapter() {
-        //Toast.makeText(getActivity(),"Albums " + albumList.size(), Toast.LENGTH_SHORT).show();
-        //galleryGridView.setAdapter(null);
-        AlbumAdapter adapter = new AlbumAdapter(getActivity(), albumList);
-        galleryGridView.setAdapter(adapter);
-        //*
-        galleryGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            public void onItemClick(AdapterView<?> parent, View view,
-                                    final int position, long id) {
+        protected String doInBackground(String... args)
+    /*
+    public void cargar_grid_view()
+    //*/ {
+            datos_album d_album = new datos_album();
+            datos_contenido d_contenido = new datos_contenido();
+            ArrayList<Contenido> l_contenido = d_contenido.obtener_contenidos(getActivity());
 
-                int view_id = view.getId();
-                if (view_id == Function.ID_IMAGE) {
-                    Intent intent = new Intent(getActivity(), GalleryPreview.class);
-                    intent.putExtra("path", albumList.get(+position).get(Function.KEY_PATH));
-                    startActivity(intent);
-                }
-                else
-                {
-                    Intent intent = new Intent(getActivity(), VideoPreview.class);
-                    intent.putExtra("path", albumList.get(+position).get(Function.KEY_PATH));
-                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    startActivity(intent);
-                }
-                Toast.makeText(getActivity(),albumList.get(+position).get(Function.KEY_PATH), Toast.LENGTH_SHORT).show();
+            //*
+            String path = null; // Imagen path
+            String name = null;
+            String countPhoto = null;
+            String tipo = null;
+            String tipo_contenido = null;
+
+            // contenido
+            for (int i = 0; i < l_contenido.size(); i++) {
+                Contenido temp = l_contenido.get(i);
+                name = temp.getNombre();
+                path = MainActivity.root_usuario + d_album.obtener_album_path(getActivity(), new Album(temp.getPadre(), "", MainActivity.usuario_activo.getUsuario())) + File.separator + temp.getNombre();
+                tipo = Function.CONTENIDO;
+                countPhoto = "";
+                tipo_contenido = temp.getTipo();
+                albumList.add(Function.mappingInbox(name, path, countPhoto, tipo, tipo_contenido));
+                pathList.add(path);
+                typeList.add(tipo_contenido);
             }
-        });
+            //*/
+            return "";
+        }
+
+        /*
+            private void set_adapter() {
+            //*/
+        @Override
+        protected void onPostExecute(String xml) {
+            //Toast.makeText(getActivity(),"Albums " + albumList.size(), Toast.LENGTH_SHORT).show();
+            //galleryGridView.setAdapter(null);
+            AlbumAdapter adapter = new AlbumAdapter(getActivity(), albumList);
+            galleryGridView.setAdapter(adapter);
+            //*
+            galleryGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                public void onItemClick(AdapterView<?> parent, View view,
+                                        final int position, long id) {
+
+                    int view_id = view.getId();
+                    Intent intent = new Intent(getActivity(), GalleryPreview.class);
+                    intent.putStringArrayListExtra("pathList", pathList);
+                    intent.putStringArrayListExtra("typeList", typeList);
+                    intent.putExtra("posicion", position);
+                    startActivity(intent);
+                    Toast.makeText(getActivity(), albumList.get(+position).get(Function.KEY_PATH), Toast.LENGTH_SHORT).show();
+                }
+            });
+        }
     }
 
 }

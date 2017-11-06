@@ -2,25 +2,20 @@ package com.example.jeiro.organizapp;
 
 import android.content.Intent;
 import android.database.Cursor;
-import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.provider.DocumentsContract;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.WindowManager;
-import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
 import com.example.jeiro.organizapp.Datos.datos_album;
 import com.example.jeiro.organizapp.Datos.datos_contenido;
 import com.example.jeiro.organizapp.Modelo.Album;
 import com.example.jeiro.organizapp.Modelo.Contenido;
 
 import java.io.File;
-import java.net.URI;
-import java.net.URISyntaxException;
 import java.text.SimpleDateFormat;
 
 /**
@@ -33,7 +28,7 @@ public class importar extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getSupportActionBar().hide();
-        setContentView(R.layout.activity_gallery_preview);
+        setContentView(R.layout.activity_gallery_preview_photo);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         //*
         Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
@@ -131,10 +126,9 @@ public class importar extends AppCompatActivity {
             }
             Toast.makeText(this, p, Toast.LENGTH_SHORT).show();
             Toast.makeText(this, nuevo_path, Toast.LENGTH_SHORT).show();
-            finish();
-            Intent intent= new Intent(this, Opciones_menu.class);
-            startActivity(intent);
-
         }
+        finish();
+        Intent intent= new Intent(this, Opciones_menu.class);
+        startActivity(intent);
     }
 }

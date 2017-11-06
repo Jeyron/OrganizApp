@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity
     public static Usuario usuario_activo;
     public static String root_usuario;
     public static String padre = "";
-    public static String tipoFragment;
+    public static boolean usado_por_fragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

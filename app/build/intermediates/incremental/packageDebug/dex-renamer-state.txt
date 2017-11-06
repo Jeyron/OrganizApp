@@ -1,4 +1,4 @@
-#Fri Oct 13 19:13:52 CST 2017
+#Sun Oct 22 05:18:45 CST 2017
 base.0=R\:\\Documents\\ProjectsAS\\OrganizApp\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_097c76e20fb5d7f981f95fcf0603f66e83d6bfc4
 renamed.1=classes2.dex
 renamed.0=classes.dex

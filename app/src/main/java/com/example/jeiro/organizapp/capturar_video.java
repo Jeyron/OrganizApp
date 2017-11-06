@@ -49,7 +49,7 @@ public class capturar_video extends AppCompatActivity {
         String timeStamp = new SimpleDateFormat("ddMMyyyy_HHmmss").format(date.getTime());
         datos_album datos = new datos_album();
         name = "VID_" + timeStamp + ".mp4";
-        mediaFile = new File(MainActivity.root_usuario + datos.obtener_album_path(this,new Album(MainActivity.padre, MainActivity.padre,MainActivity.usuario_activo.getUsuario())) + File.separator + name);
+        mediaFile = new File(MainActivity.root_usuario + datos.obtener_album_path(this,new Album(MainActivity.padre, MainActivity.padre, "admin")) + File.separator + name);
     }
 
     @Override
